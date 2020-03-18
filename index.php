@@ -5,8 +5,8 @@
         <title>Adrien MAILLARD</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css" title="Adrien" />
-        <link rel="alternate stylesheet" type="text/css" href="barney.css" title="Barney" />
+        <link rel="stylesheet" type="text/css" href="cssAdrien/style.css" title="Adrien" />
+        <link rel="alternate stylesheet" type="text/css" href="cssBarney/style.css" title="Barney" />
     </head>
 
     <body>
@@ -39,14 +39,14 @@
                 </div>
             </section>
 
-            <section id="portfolio">
+            <section id="achievments">
                 <h2>Expérimenté</h2>
                 <div class="content">
                     <?php include 'experience.php' ?>
                 </div>
             </section>
 
-            <section id="academic">
+            <section id="education">
                 <h2>Formé</h2>
                 <div class="content">
                     <?php include 'academic.php' ?>
