@@ -1,8 +1,8 @@
-<?php foreach ($skills as $skillType => $skillTab) { ?>
+<?php foreach ($skills as $skillFamilly => $skillTab) { ?>
 
     <DIV class="skillSet">
 
-        <h3><?=$skillType?></h3>
+        <h3><?=$skillFamilly?></h3>
 
         <DIV class="skillList">
         <?php foreach ($skillTab as $skill) { ?>
@@ -17,7 +17,6 @@
             </article>
         <?php } ?>
         </DIV>
-
     </DIV>
 
 <?php } ?>

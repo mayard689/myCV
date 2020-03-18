@@ -1,7 +1,7 @@
 @import "cssSkills.css";
+@import "cssContact.css";
 @import "cssNavbar.css";
 @import "cssWhoami.css";
-@import "cssExperience.php";/*it doesn't seem possible to import a php style file from another css file, it must be done throught the html file*/
 @import "cssExperience.css";
 
 @import url(//db.onlinewebfonts.com/c/07342dff729e3ff82873f8eeee4c9612?family=GT+Haptik+Bold);
@@ -41,6 +41,7 @@ body {
     color: var(--normalFontColorDark);
     font-size: var(--fontSize);
     font-family: var(--fontP);
+    scroll-behavior: smooth;
 }
 
 
@@ -80,8 +81,9 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    height: 100vh;
+
+    height: calc(100vh - var(--navbarHeight));
+    width:99vw;
 
     padding-top:var(--navbarHeight);
 }
@@ -94,10 +96,6 @@ section {
     height:100%;
     width:100%;
 }
-
-
-
-
 
 body{
     margin-top:25px;
