@@ -1,0 +1,113 @@
+@import "cssSkills.css";
+@import "cssNavbar.css";
+@import "cssWhoami.css";
+@import "cssExperience.php";/*it doesn't seem possible to import a php style file from another css file, it must be done throught the html file*/
+@import "cssExperience.css";
+
+@import url(//db.onlinewebfonts.com/c/07342dff729e3ff82873f8eeee4c9612?family=GT+Haptik+Bold);
+
+:root {
+    --backgroundColorLight: #f6f6f6;
+    --backgroundColorDark: #404040;
+    --titleFontColor: #db9a0c;
+    --normalFontColorDark: var(--backgroundColorDark);
+    --normalFontColorLight: var(--backgroundColorLight);
+
+    --navbarHeight:50px;
+
+    --h1Size:2vw;
+    --h2Size:3vw;
+    --h3Size:calc(0.75*var(--h2Size));
+    --aSize:var(--h3Size);
+    --fontSize:calc(0.75*var(--h3Size));
+
+    --fontH1:"GT Haptik Bold";
+    --fontH2:"GT Haptik Bold";
+    --fontH3:"GT Haptik Bold";
+    --fontP:arial;
+    --fontA:arial;
+
+    /*--debugBorder: solid thin;*/
+    --debugBorder: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--backgroundColorLight);
+    color: var(--normalFontColorDark);
+    font-size: var(--fontSize);
+    font-family: var(--fontP);
+}
+
+
+
+h1 {
+    font-size:var(--h1Size);
+    color: var(--normalFontColorDark);
+    font-family : var(--fontH1);
+    margin:10px;
+}
+
+h2 {
+    font-size: var(--h2Size);
+    color: var(--normalFontColorDark);
+    font-family : var(--fontH2);
+    margin:10px;
+}
+
+h3 {
+    font-size: var(--h3Size);
+    color: var(--normalFontColorDark);
+    font-family : var(--fontH3);
+    margin:10px;
+}
+
+a {
+    font-size: var(--aSize);
+    color:var(--normalFontColorLight);
+    font-family: var(--fontA);
+    margin:10px;
+    text-decoration: none;
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    height: 100vh;
+
+    padding-top:var(--navbarHeight);
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height:100%;
+    width:100%;
+}
+
+
+
+
+
+body{
+    margin-top:25px;
+}
+
+
+
+
+
+
+
+
+
