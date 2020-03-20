@@ -1,0 +1,89 @@
+#whoami h2 {
+    padding-left: 15vw;
+
+
+}
+
+#whoami {
+    min-height: 100vh;
+}
+
+#whoami .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5vw;
+    position: relative;
+}
+
+
+.objectives {
+    width: 40vw;
+    margin-left: 30vw;
+    min-height: 180px;
+    z-index:10;
+}
+
+#whoami .content img {
+    width: 20vw;
+    position: absolute;
+    top: -20vw;
+    left: -3vw;
+    z-index: 100;
+}
+
+#whoami .content .dirty {
+    width: 10vw;
+    position: absolute;
+    top: 4vw;
+    left: 75vw;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    #whoami {
+        height: inherit;
+        min-height:100vh;
+    }
+
+    #whoami h1{
+        margin:50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #whoami .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #whoami h2 {
+        margin-top: 0px;
+    }
+
+    #whoami .content p {
+        width: 100%;
+        margin: 0px;
+    }
+
+    #whoami .content img {
+        width: 20vw;
+        position: absolute;
+        top: -40vw;
+        left: -5vw;
+        z-index: 100;
+    }
+
+    _#whoami .content .dirty {
+        width: 10vw;
+        position: absolute;
+        top: 60vw;
+        left: 80vw;
+        z-index: 100;
+    }
+}
+
+
+}

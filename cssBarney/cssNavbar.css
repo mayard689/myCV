@@ -1,0 +1,75 @@
+
+.smallNavbar {
+    height: 100px;
+    background-color: #f06bbd;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+}
+
+#menu_burger {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menuBurger a {
+    font-family: "Simpson";
+    font-size: 3vw;
+    cursor: pointer;
+    color: white;
+    text-shadow: #ecb243 1px 0 10px;
+}
+
+.afterNavbar {
+    display:none;
+}
+
+.button_menu {
+    display: none;
+}
+
+/*Mobile Version */
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        margin-bottom: 10%;
+
+    }
+
+    .menu_burger {
+        display: none;
+    }
+
+    .button_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .button_menu img {
+        width: 80px;
+    }
+
+    .menu_burger:target {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        font-size: 3em;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: #f06bbc;
+    }
+
+    .navbar a {
+
+        font-size: 1em;
+    }
+
+}

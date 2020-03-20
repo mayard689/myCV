@@ -20,6 +20,7 @@
     --h3Size:calc(0.75*var(--h2Size));
     --aSize:var(--h3Size);
     --fontSize:calc(0.75*var(--h3Size));
+    --h1SubtitleSize:3vw;
 
     --fontH1:"GT Haptik Bold";
     --fontH2:"GT Haptik Bold";

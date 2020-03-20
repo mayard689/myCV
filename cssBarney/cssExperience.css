@@ -1,0 +1,52 @@
+
+#achievments .content {
+    display:flex;
+    flex-direction: column;
+}
+
+.calendar{
+    border: var(--debugBorder) blue;
+    width:80%;
+    padding:10px;
+    border: thin solid black;
+}
+
+.calendarElement{
+    border: var(--debugBorder) red;
+    width:100%;
+    overflow:hidden;
+}
+
+.job{
+    position:relative;
+    border:  var(--debugBorder) green;
+    background:lightblue;
+    --childMargin:10px;
+}
+
+.jobName, .jobResults, .jobCompany{
+    border:  var(--debugBorder) yellow;
+    overflow: visible;
+    white-space: nowrap;
+    width:100%;
+    transform:translateX(100%);
+    margin-left:var(--childMargin);
+    margin-right:var(--childMargin);
+}
+
+.calendarElement:last-child .job .jobName, .calendarElement:last-child .job .jobCompany, .calendarElement:last-child .job .jobResults{
+    width: fit-content;
+    transform:translateX(calc(-100% - 2*var(--childMargin)));
+}
+
+.jobName{
+
+}
+
+.jobResults{
+
+}
+
+.jobCompany{
+
+}

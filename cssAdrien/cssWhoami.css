@@ -4,3 +4,33 @@
     display:flex;
     align-items: center;
 }
+
+/**/
+.ID {
+    position:fixed;
+    top : calc(var(--navbarHeight)*0.02);
+    left : 0;
+}
+
+.ID {
+    flex:1;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding:0px;
+}
+
+.ID h1 {
+    font-size: 20px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.ID h2 {
+    font-size: calc(var(--h2Size)/3);
+    margin-top:0;
+    margin-bottom:0;
+}
+/**/

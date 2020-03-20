@@ -1,0 +1,174 @@
+@import "cssNavbar.css";
+@import "cssContact.css";
+@import "cssNetwork.css";
+@import "cssSkills.css";
+@import "cssWhoami.css";
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
+
+@font-face {
+    font-family: "Simpson";
+    src: url("../font/Homer_Simpson_Revised.ttf");
+}
+
+@font-face {
+    font-family: "Barney";
+    src: url("../font/TYPO_COMICS_Light_demo.otf")
+}
+
+:root {
+    --backgroundColor1: white;
+    --backgroundColor2: #17BBEE;
+    --fontColorLight: #F5F4F4;
+    --fontColorDark: #494949;
+    --emphasisFontColor: #FDD420;
+
+    --mainTitleSize: 36pt;
+
+    --padding: 25px;
+    --shadowColor: #E79E11;
+
+    --h1Size: 11vw;
+    --h2Size: calc(0.66* var(--h1Size));
+    --h3Size: calc(0.3* var(--h1Size));
+    --fontSize: calc(0.15* var(--h1Size));
+    --h1SubtitleSize:3vw;
+
+    --fontFamily: "Homemade Apple";
+    --fontFamily: "Simpson";
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--fontColorDark);
+    font-size: var(--fontSize);
+}
+
+section {
+
+    padding: var(--padding);
+    padding-top: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+h1 {
+    font-family: "Simpson";
+    font-size: var(--h1Size);
+    color: var(--fontColorDark);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--shadowColor);
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Simpson";
+    text-transform: uppercase;
+    color: var(--fontColorDark);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--shadowColor);
+}
+
+h3 {
+    font-family: "Simpson";
+    font-size: var(--h3Size);
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: var(--fontSize);
+    color: var(--darkColor);
+    font-family: arial;
+}
+
+img {
+    width: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+section:nth-child(even) {
+    color: var(--fontColorLight);
+    background: var(--backgroundColor2);
+}
+
+section:nth-child(even) h2 {
+    color: var(--fontColorLight);
+}
+
+section:nth-child(odd) {
+    color: var(--fontColorDark);
+    background: var(--backgroundColor1);
+}
+
+h2 {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    text-shadow: 5px grey;
+    height: var(--h1size);
+}
+
+h2:nth-of-type(odd) {
+    animation-name: oscillate1;
+}
+
+h2:nth-of-type(even) {
+    animation-name: oscillate2;
+}
+
+@keyframes oscillate1 {
+    0% {
+        font-size: 5vw;
+        transform: rotate(0.5deg);
+    }
+    100% {
+        font-size: 5.05vw;
+        transform: translateX(5px);
+    }
+}
+
+@keyframes oscillate2 {
+    0% {
+        font-size: 5.05%;
+        transform: rotate(0.5deg);
+        transform: translateX(5px);
+    }
+
+    100% {
+        font-size: 5;
+        transform: translateX(-2px);
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    :root {
+        --h1Size: 15vw;
+        --h2Size: calc(0.66* var(--h1Size));
+        --h3Size: calc(0.3* var(--h1Size));
+        --fontSize: calc(0.15* var(--h1Size));
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    :root {
+        --h1Size: 25vw;
+        --h2Size: calc(0.7* var(--h1Size));
+        --h3Size: calc(0.5* var(--h1Size));
+        --fontSize: calc(0.2* var(--h1Size));
+    }
+}
