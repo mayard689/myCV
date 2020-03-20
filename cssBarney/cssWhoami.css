@@ -1,8 +1,4 @@
-#whoami h2 {
-    padding-left: 15vw;
 
-
-}
 
 #whoami {
     min-height: 100vh;
@@ -11,6 +7,7 @@
 #whoami .content {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     margin: 5vw;
     position: relative;
@@ -19,10 +16,11 @@
 
 .objectives {
     width: 40vw;
-    margin-left: 30vw;
+    margin: 5vw;
     min-height: 180px;
     z-index:10;
 }
+
 
 #whoami .content img {
     width: 20vw;
@@ -86,4 +84,3 @@
 }
 
 
-}

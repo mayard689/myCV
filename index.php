@@ -25,8 +25,10 @@
 
         <main>
 
+            <h1>Adrien MAILLARD</h1>
+
             <section id="whoami">
-                <h2>Qui suis je ?</h2>
+                <h2>CV d'un Barman expérimenté ?</h2>
                 <div class="content">
                     <?php include 'whoami.php' ?>
                 </div>

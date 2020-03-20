@@ -1,13 +1,19 @@
 
-.smallNavbar {
-    height: 100px;
-    background-color: #f06bbd;
+
+.smallNavbar
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--navbarHeight);
+    background-color: var(--navbarColor);
     z-index: 99;
     position: fixed;
     width: 100%;
 }
 
-#menu_burger {
+.menuBurger {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -16,45 +22,45 @@
 }
 
 .menuBurger a {
-    font-family: "Simpson";
     font-size: 3vw;
     cursor: pointer;
     color: white;
-    text-shadow: #ecb243 1px 0 10px;
+    text-shadow: var(--shadowColor) 1px 0 10px;
 }
 
 .afterNavbar {
     display:none;
 }
 
-.button_menu {
+.buttonMenu {
     display: none;
 }
 
 /*Mobile Version */
 @media screen and (max-width: 700px) {
 
-    .navbar {
+    .smallNavbar {
         margin-bottom: 10%;
-
     }
 
-    .menu_burger {
+    .menuBurger {
         display: none;
     }
 
-    .button_menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+    .buttonMenu {
+        display: block;
+        width: 80px;
+        height: calc( 0.8 * var(--navbarHeight));
+        background: no-repeat url("/images/barney/menu.png");
+        background-size: contain;
+        color: transparent;
     }
 
-    .button_menu img {
+    .buttonMenu img {
         width: 80px;
     }
 
-    .menu_burger:target {
+    .menuBurger:target {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -64,11 +70,10 @@
         top: 0;
         left: 0;
         z-index: 100;
-        background-color: #f06bbc;
+        background-color: var(--navbarColor);
     }
 
-    .navbar a {
-
+    .smallNavbar a {
         font-size: 1em;
     }
 

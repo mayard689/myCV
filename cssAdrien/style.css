@@ -20,7 +20,7 @@
     --h3Size:calc(0.75*var(--h2Size));
     --aSize:var(--h3Size);
     --fontSize:calc(0.75*var(--h3Size));
-    --h1SubtitleSize:3vw;
+            --h1SubtitleSize:calc(0.33 * var(--h2Size));
 
     --fontH1:"GT Haptik Bold";
     --fontH2:"GT Haptik Bold";
@@ -48,6 +48,10 @@ body {
 
 
 h1 {
+    position:sticky;
+    top:calc(-1 * var(--navbarHeight));/*var(--navbarHeight)*/
+    transform:translateY(var(--navbarHeight));
+
     font-size:var(--h1Size);
     color: var(--normalFontColorDark);
     font-family : var(--fontH1);

@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
 
-    padding:0px;
+    padding:0px;/*was 10 before */
 }
 
 .ID h1 {
@@ -28,9 +28,5 @@
     margin-bottom:0;
 }
 
-.ID h2 {
-    font-size: calc(var(--h2Size)/3);
-    margin-top:0;
-    margin-bottom:0;
-}
+
 /**/
