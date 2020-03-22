@@ -4,6 +4,7 @@
 @import "cssWhoami.css";
 @import "cssExperience.css";
 @import "various.css";
+@import "education.css";
 
 @import url(//db.onlinewebfonts.com/c/07342dff729e3ff82873f8eeee4c9612?family=GT+Haptik+Bold);
 
@@ -16,7 +17,7 @@
 
     --navbarHeight:50px;
 
-    --h1Size:2vw;
+    --referenceFontSize:2vw;
     --h2Size:3vw;
     --h3Size:calc(0.75*var(--h2Size));
     --aSize:var(--h3Size);
@@ -54,7 +55,7 @@ h1 {
     top:calc(-1 * var(--navbarHeight));/*var(--navbarHeight)*/
     transform:translateY(var(--navbarHeight));
 
-    font-size:var(--h1Size);
+    font-size:var(--referenceFontSize);
     color: var(--normalFontColorDark);
     font-family : var(--fontH1);
     margin:10px;

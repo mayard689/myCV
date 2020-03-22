@@ -62,8 +62,8 @@
 .form-group input, .form-group textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--titleFontColor);
-    font-size: var(--h3Size);
+    border-bottom: 1px solid var(--emphasisFontColor);
+    font-size: var(--fontSize);
     font-family: var(--fontP);
 }
 
@@ -78,19 +78,39 @@
 .form-btn {
     margin-top: 40px;
 }
+
 .form-btn .btn {
-    border: 1px solid var(--titleFontColor);
+    border: 1px solid var(--emphasisFontColor);
     padding: .85rem 1.25rem;
     transition: all .3s ease;
     border-radius: 3px;
     color: inherit;
     background: transparent;
     cursor: pointer;
-    font-size: calc(var(--h3Size) / 2);
+    font-size: var(--h2Size) ;
     font-family: var(--fontH3);
 }
+
 .form-btn .btn:hover {
-    border-color:var(--titleFontColor);
-    background-color: var(--titleFontColor);
-    color: var(--normalFontColorDark);
+    border-color:var(--emphasisFontColor);
+    background-color: var(--emphasisFontColor);
+    color: var(--fontColorDark);
+}
+
+
+@media only screen and (max-width: 700px) {
+    #button{
+        order:3;
+        width:100%;
+    }
+
+    #contact-info {
+        order:4;
+    }
+
+    .contactBloc{
+        width:100%;
+        margin:10px;
+    }
+
 }

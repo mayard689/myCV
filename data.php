@@ -100,7 +100,7 @@ $barneySectionName=[
     "achievments"=>"Expériences",
     "education" =>"Formations",
     "various"=>"Loisirs",
-    "contact"=>"Contact"
+    "contact"=>"M'envoyer un donut's électronique"
 ];
 
 

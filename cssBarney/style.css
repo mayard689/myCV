@@ -3,6 +3,7 @@
 @import "cssSkills.css";
 @import "cssWhoami.css";
 @import "various.css";
+@import "education.css";
 
 /* the line below declare the "Homemade Apple" font family */
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
@@ -18,25 +19,24 @@
 }
 
 :root {
-    --backgroundColor1: #F5F4F4;/*white;*/
-    --backgroundColor2: #17BBEE;
+    --backgroundColorLight: #F5F4F4;
+    --backgroundColorDark: #17BBEE;
     --fontColorLight: #F5F4F4;
     --fontColorDark: #494949;
     --emphasisFontColor: #FDD420;
     --navbarColor:#f06bbd;
     --shadowColor: var(--emphasisFontColor);
 
-    --h1Size: 5vw;
-    --h2Size: calc(0.66* var(--h1Size));
-    --h3Size: calc(0.3* var(--h1Size));
-    --fontSize: calc(0.25* var(--h1Size));
-
-    --fontFamily: "Homemade Apple";
-    --fontFamily: "Simpson";
+    --referenceFontSize: 5vw;
+    --h1Size:calc(2 * var(--referenceFontSize));
+    --h2Size: calc(0.66* var(--referenceFontSize));
+    --h3Size: calc(0.3* var(--referenceFontSize));
+    --fontSize: calc(0.3* var(--referenceFontSize));
 
     --fontH1:"Simpson";
     --fontH2:"Simpson";
     --fontH3:"Simpson";
+    --fontH4:"Homemade Apple";
     --fontSpecial:"Simpson";
     --fontP:arial;
     --fontA:"Simpson";
@@ -64,6 +64,7 @@ body {
     padding: 0;
     color: var(--fontColorDark);
     font-size: var(--fontSize);
+    font-family : var(--fontP);
 }
 
 section {
@@ -72,23 +73,19 @@ section {
     padding-left: 0px;
     padding-right: 0px;
     width: 100%;
-    overflow: hidden;
 }
 
 section:first-of-type{
-    /*padding-top: calc( 2 * var(--navbarHeight) + 5vw);*/
-    padding-top: calc( 2 * var(--sectionVerticalShift));/**/
+    padding-top: calc( 2 * var(--sectionVerticalShift));
 }
 
 h1 {
     position:absolute;
-    /*top:var(--firstTitleVerticalShift);*/
-    top: var(--sectionVerticalShift);/****/
+    top: var(--sectionVerticalShift);
 
     font-family : var(--fontH1);
     font-size: var(--h1Size);
     color: var(--fontColorDark);
-    background-color:var(--backgroundColor2);
     text-align: center;
 
     text-shadow: 4px 4px 8px var(--shadowColor);
@@ -110,6 +107,10 @@ h3 {
     white-space: nowrap;
 }
 
+h4 {
+    text-decoration: underline;
+    font-family:var(--fontH4);
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -126,19 +127,21 @@ img {
     width: 100%;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
     color: var(--fontColorLight);
-    background: var(--backgroundColor2);
+    background: var(--backgroundColorDark);
+}
+
+section:nth-child(even) {
+    color: var(--fontColorDark);
+    background: var(--backgroundColorLight);
 }
 
 section:nth-child(even) h2 {
-    color: var(--fontColorLight);
+    color: var(--fontColorDark);
 }
 
-section:nth-child(odd) {
-    color: var(--fontColorDark);
-    background: var(--backgroundColor1);
-}
+
 
 h2 {
     animation-duration: 1.5s;
@@ -182,24 +185,19 @@ h2:nth-of-type(even) {
 
 @media only screen and (max-width: 1500px) {
     :root {
-        --h1Size: 15vw;
-        --h2Size: calc(0.66* var(--h1Size));
-        --h3Size: calc(0.3* var(--h1Size));
-        --fontSize: calc(0.15* var(--h1Size));
+        --referenceFontSize: 15vw;
+        --h2Size: calc(0.66* var(--referenceFontSize));
+        --h3Size: calc(0.3* var(--referenceFontSize));
+        --fontSize: calc(0.15* var(--referenceFontSize));
     }
 }
 
 @media only screen and (max-width: 700px) {
     :root {
-        --h1Size: 15vw;
-        --h2Size: calc(0.8* var(--h1Size));
-        --h3Size: calc(0.5* var(--h1Size));
-        --fontSize: calc(0.35* var(--h1Size));
-    }
-
-    h2:first-of-type{
-        _padding-top: var(--firstTitleVerticalShift);
-        _margin-top:150px;
-        _margin-bottom:150px;
+        --referenceFontSize: 15vw;
+        --h1Size:var(--referenceFontSize);
+        --h2Size: calc(0.8* var(--referenceFontSize));
+        --h3Size: calc(0.5* var(--referenceFontSize));
+        --fontSize: calc(0.35* var(--referenceFontSize));
     }
 }
