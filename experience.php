@@ -1,7 +1,7 @@
 
 <DIV class="calendar">
 
-    <?php foreach ($jobs as $job) { ?>
+    <?php foreach ($persons[$activePerson]["jobs"] as $job) { ?>
         <article class="calendarElement">
 
             <?php

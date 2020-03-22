@@ -3,10 +3,10 @@
 <form action="#" method="POST" class="form-contact">
 
     <div id="contact-info" class="contactBloc">
-        <p class="item-info">Adrien MAILLARD</p>
-        <p class="item-info">69 rue Lorem Ipsum - Orléans</p>
-        <p class="item-info">06.06.06.06.06</p>
-        <p class="item-info">lorem@ipsum.com</p>
+        <p class="item-info"><?=$persons[$activePerson]["completeName"]?></p>
+        <p class="item-info"><?=$persons[$activePerson]["address"]?></p>
+        <p class="item-info"><?=$persons[$activePerson]["phoneNumber"]?></p>
+        <p class="item-info"><?=$persons[$activePerson]["email"]?></p>
         <a href="#"><img src="https://icongr.am/devicon/linkedin-plain.svg?color=fdd420" alt="Linkedin"></a>
         <a href="#"><img src="https://icongr.am/entypo/pinterest-with-circle.svg?color=fdd420" alt="Pinterest"></a>
         <a href="#"><img src="https://icongr.am/entypo/instagram-with-circle.svg?color=fdd420" alt="Instagram"></a>

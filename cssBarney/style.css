@@ -1,8 +1,9 @@
 @import "cssNavbar.css";
 @import "cssContact.css";
-@import "cssNetwork.css";
 @import "cssSkills.css";
 @import "cssWhoami.css";
+@import "various.css";
+
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
 
 @font-face {

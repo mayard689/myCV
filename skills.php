@@ -1,22 +1,27 @@
-<?php foreach ($skills as $skillFamilly => $skillTab) { ?>
+<?php
+    $skillsFamilies=$persons[$activePerson]["skills"];
+    foreach ($skillsFamilies as $skillFamilyName => $skillFamily) { ?>
 
-    <DIV class="skillSet">
-
-        <h3><?=$skillFamilly?></h3>
+    <DIV class="skillFamily">
+        <h3><?=$skillFamilyName?></h3>
 
         <DIV class="skillList">
-        <?php foreach ($skillTab as $skill) { ?>
+        <?php foreach ($skillFamily as $skillName => $skillData) { ?>
             <article class="skill">
-            <?php foreach ($skill as $key => $value) {?>
+                <h4><?=$skillName?></h4>
 
-                    <DIV class="<?=$key?>">
-                        <?=$value?>
-                    </DIV>
+                <DIV class="skillDataList">
+                <?php foreach ($skillData as $data => $value) {?>
+                        <DIV class="<?=$data?>">
+                            <?=$value?>
+                        </DIV>
+                <?php } ?>
+                </DIV>
 
-            <?php } ?>
             </article>
         <?php } ?>
         </DIV>
+
     </DIV>
 
 <?php } ?>
