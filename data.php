@@ -42,4 +42,4 @@ $jobs=[
 ];
 
 $calendarMin='01-01-2004';
-$calendarMax='31-07-2019';
+$calendarMax='31-07-2020';
