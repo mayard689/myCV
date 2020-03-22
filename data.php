@@ -127,7 +127,7 @@ $persons =[
         "address"=> "69 rue de la soif - Springfield",
         "phoneNumber"=>"07.07.07.07.07",
         "email" => "barney@truc.bidule",
-        "stylesheet" => "cssAdrienBarney",
+        "stylesheet" => "cssBarney",
         "sectionsNames" => $barneySectionName,
         "skills" => $barneySkills,
         "jobs" => $barneyJobs,
@@ -135,6 +135,5 @@ $persons =[
 ];
 
 $calendarMin='01-01-2004';
-$calendarMax='31-07-2019';
-
+$calendarMax='31-07-2020';
 

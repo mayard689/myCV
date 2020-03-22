@@ -2,45 +2,136 @@
 #achievments .content {
     display:flex;
     flex-direction: column;
+
+    margin-top:00px;
+    margin-left:50px;
 }
 
 .calendar{
     border: var(--debugBorder) blue;
+
+    --experienceVerticalShift:100px;
+    --calendarHeight:10px;
+    --connectionLineToTimeline: thick solid black;
+    --jobDataPadding:10px;
+
+    --verticalTranslationForDataOverTimeline:translateY(calc(-5px - var(--calendarHeight) - 2 * var(--experienceVerticalShift)));
+    --verticalTranslationForDataBelowTimeline:translateY(var(--calendarHeight));
+    --horizontalTranslationForDataOnTheLeft :translateX(-50%);
+    --horizontalTranslationForDataOnTheRight :translateX(50%);
+
+    position:relative;
     width:80%;
-    padding:10px;
-    border: thin solid black;
+
+    height:var(--calendarHeight);
+    border-bottom: thick solid black;
+
 }
 
 .calendarElement{
+    position:absolute;
+    top:0;
+
     border: var(--debugBorder) red;
     width:100%;
-    overflow:hidden;
+    height:var(--calendarHeight);
 }
 
 .job{
+    display:flex;
+    flex-direction: column;
     position:relative;
     border:  var(--debugBorder) green;
-    background:lightblue;
-    --childMargin:10px;
+    height:var(--calendarHeight);
+    background-size: contain;
+
+    border-left: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
+    border-right: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
+}
+
+.calendarElement:nth-of-type(odd) .job{
+    border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
+    transform: translateY(200%);
+}
+
+.calendarElement:nth-of-type(even) .job{
+    border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
+    transform: translateY(-100%);
 }
 
 .jobName, .jobResults, .jobCompany{
+    display:flex; flex-direction:column;
+
     border:  var(--debugBorder) yellow;
     overflow: visible;
     white-space: nowrap;
     width:100%;
-    transform:translateX(100%);
-    margin-left:var(--childMargin);
-    margin-right:var(--childMargin);
+
+    width:max-content;
+    align-self: center;
+    transform:translateX(-50%);/*note : we change here the property's value for everybody, we will change it later for some of them*/
+
+    border-left:var(--connectionLineToTimeline);
+
+    padding-left:var(--jobDataPadding);
+    padding-right:var(--jobDataPadding);
 }
 
+
+/* jobs below the timeline */
+.calendarElement:nth-of-type(odd) .job .jobName, .calendarElement:nth-of-type(odd) .job .jobCompany, .calendarElement:nth-of-type(odd) .job .jobResults {
+    transform:translateX(50%) var(--verticalTranslationForDataBelowTimeline);
+}
+
+.calendarElement:nth-of-type(odd) .job .jobName::before {
+    content:" ";
+    height:var(--experienceVerticalShift) ;
+}
+
+/* jobs over the timeline */
+.calendarElement:nth-of-type(even) .job .jobName, .calendarElement:nth-of-type(even) .job .jobCompany, .calendarElement:nth-of-type(even) .job .jobResults {
+    transform:var(--horizontalTranslationForDataOnTheRight) var(--verticalTranslationForDataOverTimeline);
+}
+
+.calendarElement:nth-of-type(even) .job .jobResults:after {
+    content:" ";
+    height:var(--experienceVerticalShift) ;
+}
+
+/* first (means 'first displayed') job child modulo 4 */
+/* displayed on the left of their parents center line / below the timeline */
+.calendarElement:nth-of-type(4n+1) .job .jobName, .calendarElement:nth-of-type(4n+1) .job .jobCompany, .calendarElement:nth-of-type(4n+1) .job .jobResults {
+    transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataBelowTimeline);
+
+    border-right: var(--connectionLineToTimeline);;
+    border-left:none;
+}
+
+/* second job child modulo 2 */
+/* displayed on the left of their parents center line / over the timeline */
+.calendarElement:nth-of-type(4n+2) .job .jobName, .calendarElement:nth-of-type(4n+2) .job .jobCompany, .calendarElement:nth-of-type(4n+2) .job .jobResults {
+
+    transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataOverTimeline);
+
+    border-right: var(--connectionLineToTimeline);
+    border-left:none;
+}
+
+
+
+
+
+
+
+
+
 .calendarElement:last-child .job .jobName, .calendarElement:last-child .job .jobCompany, .calendarElement:last-child .job .jobResults{
-    width: fit-content;
-    transform:translateX(calc(-100% - 2*var(--childMargin)));
+    _width: fit-content;
+    _transform:translateX(calc(-100% - 2*var(--childMargin)));
 }
 
 .jobName{
-
+    font-familly:var(--fontSpecial);
 }
 
 .jobResults{
@@ -48,5 +139,6 @@
 }
 
 .jobCompany{
+    _font-size: 25px;/*calc( 0.75 * var(--fontSize));*/
 
 }

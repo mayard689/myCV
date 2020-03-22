@@ -34,7 +34,7 @@
     height: var(--navbarHeight);
 
     background-color: blue;
-    z-index:0;
+    z-index:10;
 }
 
 .menuBurger:before {
@@ -59,3 +59,6 @@
 
 }
 
+.buttonMenu {
+    display: none;
+}

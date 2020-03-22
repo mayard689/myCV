@@ -4,6 +4,7 @@
 @import "cssWhoami.css";
 @import "various.css";
 
+/* the line below declare the "Homemade Apple" font family */
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
 
 @font-face {
@@ -36,6 +37,7 @@
     --fontH1:"Simpson";
     --fontH2:"Simpson";
     --fontH3:"Simpson";
+    --fontSpecial:"Simpson";
     --fontP:arial;
     --fontA:"Simpson";
 
