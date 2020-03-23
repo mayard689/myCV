@@ -1,5 +1,5 @@
 <?php
-    $skillsFamilies=$persons[$activePerson]["skills"];
+    $skillsFamilies=$persons[$activePersonName]["skills"];
     foreach ($skillsFamilies as $skillFamilyName => $skillFamily) { ?>
 
     <DIV class="skillFamily">

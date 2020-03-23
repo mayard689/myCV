@@ -120,6 +120,10 @@ $persons =[
         "sectionsNames" => $adrienSectionName,
         "skills" => $adrienSkills,
         "jobs" => $adrienJobs,
+        "whoami" =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+        culpa qui officia deserunt mollit anim id est laborum."
     ],
 
     "barney" => [
@@ -131,9 +135,12 @@ $persons =[
         "sectionsNames" => $barneySectionName,
         "skills" => $barneySkills,
         "jobs" => $barneyJobs,
+        "whoami" =>"Hey guys. Je suis Barney, le barman qu'il vous faut. Vous verrez ici un aperçu de quelques une de mes compétences. C'est un 
+        peu long donc n'hésitez pas à ouvrir une bière pendant votre lecture."
     ]
 ];
 
+/*to be automatically calculated*/
 $calendarMin='01-01-2004';
 $calendarMax='31-07-2020';
 
