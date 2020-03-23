@@ -1,4 +1,5 @@
-<?php include 'data.php' ?>
+<?php require 'data.php' ?>
+<?php require 'tools.php' ?>
 
 <?php
 $activePersonName="adrien";

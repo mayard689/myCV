@@ -42,7 +42,7 @@ $adrienSkills=[
 //EXPERIENCE DATA
 
 $adrienJobs=[
-    ["name" => "Developpeur", "company" => "LUAN", "startDate" => "01-02-2004", "endDate" => "01-08-2004", "results" => "Lorem ipsum"],
+    ["name" => "Chercheur en optique", "company" => "LUAN", "startDate" => "01-02-2004", "endDate" => "01-08-2004", "results" => "Lorem ipsum"],
     ["name" => "Chef de projet", "company" => "FARE", "startDate" => "01-06-2005", "endDate" => "14-09-2007", "results" => "Lorem ipsum"],
     ["name" => "Responsable de Laboratoire", "company" => "IPEV", "startDate" => "15-09-2007", "endDate" => "31-12-2008", "results" => "Lorem ipsum"],
     ["name" => "Chef de projet", "company" => "FARE", "startDate" => "01-4-2009", "endDate" => "31-12-2014", "results" => "Lorem ipsum"],
@@ -60,6 +60,30 @@ $adrienSectionName=[
     "contact"=>"Contactez moi"
 ];
 
+//CONTACT FORM FIELDS
+
+$adrienContactForm=[
+    "Nom ou Entreprise"=> [
+        "type" => "text",
+        "placeholder" => "",
+        "value" => "",
+        "mandatory" => true
+    ],
+
+    "Email"=> [
+        "type" => "email",
+        "placeholder" => "",
+        "value" => "",
+        "mandatory" => true
+    ],
+
+    "Sujet"=> [
+        "type" => "text",
+        "placeholder" => "",
+        "value" => "",
+        "mandatory" => true
+    ],
+];
 
 /****************************************/
 /*********** Barney DATA ****************/
@@ -103,6 +127,37 @@ $barneySectionName=[
     "contact"=>"M'envoyer un donut's électronique"
 ];
 
+//CONTACT FORM FIELDS
+
+$barneyContactForm=[
+    "Nom ou Entreprise"=> [
+        "type" => "text",
+        "placeholder" => "Taverne de Moe",
+        "value" => "",
+        "mandatory" => false
+    ],
+
+    "Email"=> [
+        "type" => "email",
+        "placeholder" => "",
+        "value" => "",
+        "mandatory" => true
+    ],
+
+    "Sujet"=> [
+        "type" => "text",
+        "placeholder" => "",
+        "value" => "",
+        "mandatory" => true
+    ],
+
+    "Votre bière préférée"=> [
+        "type" => "text",
+        "placeholder" => "Duff",
+        "value" => "",
+        "mandatory" => true
+    ],
+];
 
 
 
@@ -120,6 +175,7 @@ $persons =[
         "sectionsNames" => $adrienSectionName,
         "skills" => $adrienSkills,
         "jobs" => $adrienJobs,
+        "contact" => $adrienContactForm,
         "whoami" =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
@@ -135,6 +191,7 @@ $persons =[
         "sectionsNames" => $barneySectionName,
         "skills" => $barneySkills,
         "jobs" => $barneyJobs,
+        "contact" => $barneyContactForm,
         "whoami" =>"Hey guys. Je suis Barney, le barman qu'il vous faut. Vous verrez ici un aperçu de quelques une de mes compétences. C'est un 
         peu long donc n'hésitez pas à ouvrir une bière pendant votre lecture."
     ]
