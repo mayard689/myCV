@@ -2,8 +2,9 @@
 @import "cssContact.css";
 @import "cssSkills.css";
 @import "cssWhoami.css";
-@import "various.css";
-@import "education.css";
+@import "cssExperience.css";
+@import "cssVarious.css";
+@import "cssEducation.css";
 
 /* the line below declare the "Homemade Apple" font family */
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap');
@@ -16,6 +17,11 @@
 @font-face {
     font-family: "Barney";
     src: url("../font/TYPO_COMICS_Light_demo.otf")
+}
+
+@font-face {
+    font-family: "Typemachine";
+    src: url("../font/typemachine/Schreibmaschine.ttf")
 }
 
 :root {
@@ -38,12 +44,15 @@
     --fontH3:"Simpson";
     --fontH4:"Homemade Apple";
     --fontSpecial:"Simpson";
-    --fontP:arial;
+    --fontP:typemachine;
     --fontA:"Simpson";
+    --fontForm:arial;
 
     --navbarHeight:calc(100px + 0vw);
     --sectionVerticalShift: calc( var(--navbarHeight) + 5vw);
 
+    /*--debugBorder: solid thin;*/
+    --debugBorder: none;
 }
 
 * {
@@ -186,6 +195,7 @@ h2:nth-of-type(even) {
 @media only screen and (max-width: 1500px) {
     :root {
         --referenceFontSize: 15vw;
+        --h1Size:var(--referenceFontSize);
         --h2Size: calc(0.66* var(--referenceFontSize));
         --h3Size: calc(0.3* var(--referenceFontSize));
         --fontSize: calc(0.15* var(--referenceFontSize));

@@ -13,20 +13,6 @@
     </div>
 
     <div id="userData" class="contactBloc">
-        <!--
-        <div class="form-group">
-            <label for="name">Nom ou entreprise*</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="subject">Sujet*</label>
-            <input type="text" id="subject" name="subject" required>
-        </div>
-        -->
 
         <?php foreach ($activePersonData["contact"] as $inputName => $inputProperties) {
             $formCheckedData=htmlCheckedDataFormat([
@@ -52,35 +38,6 @@
 
 
     </div>
-
-    <?php
-    /**$adrienContactForm=[
-    "Nom ou Entreprise"=> [
-    "type" => "text",
-    "placeholder" => "",
-    "value" => "",
-    "mandatory" => true
-    ],
-
-    "Email"=> [
-    "type" => "email",
-    "placeholder" => "",
-    "value" => "",
-    "mandatory" => true
-    ],
-
-    "Sujet"=> [
-    "type" => "text",
-    "placeholder" => "",
-    "value" => "",
-    "mandatory" => true
-    ],
-    ];*/
-    ?>
-
-
-
-
 
     <div id="message" class="contactBloc form-group">
         <label for="message">Message*</label>

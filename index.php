@@ -2,13 +2,13 @@
 <?php require 'tools.php' ?>
 
 <?php
-$activePersonName="adrien";
-if (isset($_GET["name"])) {
-    if (strtolower($_GET["name"])=="barney") {
-        $activePersonName="barney";
+    $activePersonName="adrien";
+    if (isset($_GET["name"])) {
+        if (strtolower($_GET["name"])=="barney") {
+            $activePersonName="barney";
+        }
     }
-}
-$activePersonData=$persons[$activePersonName];
+    $activePersonData=$persons[$activePersonName];
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ $activePersonData=$persons[$activePersonName];
 
     <body>
 
-        <header style="overflow:visible">
+        <header>
         </header>
 
             <div class="afterNavbar"></div>

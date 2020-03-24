@@ -18,8 +18,8 @@
     align-items: center;
     background: no-repeat center/100% url("../images/barney/post_it-1.png");
     width:28vw;
-    height:28vw;
-    padding:5vw;
+    min-height:28vw;
+    padding:6vw;
     color: var(--fontColorDark);
     font-family:"Homemade Apple";
 
@@ -28,13 +28,15 @@
     animation-direction: alternate;
     animation-fill-mode: backwards;
     transform-origin: top center;
+}
 
-
+.skill:nth-of-type(2){
+    background: no-repeat 20% 10%/30% url("../images/barney/tache2.png"), no-repeat center/100% url("../images/barney/post_it-1.png");
 }
 
 .skill:hover{
     transform: translateY(10vw);
-    _transform:translate(50vw);/* translateY(-100vh) rotate3d(1,1,1,1000deg);*/
+    _transform:translate(50vw);
     _transition-duration: 3s;
     _transition-timing-function: ease-in-out;
 }

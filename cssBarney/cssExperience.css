@@ -2,6 +2,7 @@
 #achievments .content {
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .calendar{
@@ -9,42 +10,96 @@
     width:80%;
     padding:10px;
     border: thin solid black;
+    background-color:var(--fontColorDark);
+    background-image: url("../images/barney/duff.png");
+    background-repeat:no-repeat;
+    background-position: 5% 30%;
+    background-size: 10vw;
+    margin:4vw;
 }
 
 .calendarElement{
+
+    display:flex;
+    justify-content: center;
+
+
     border: var(--debugBorder) red;
     width:100%;
     overflow:hidden;
 }
 
 .job{
-    position:relative;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width:40vw !important;
+    height:8vw;
+
     border:  var(--debugBorder) green;
-    background:lightblue;
     --childMargin:10px;
+
+    margin:1vw;
+    background: no-repeat center/100% url("../images/barney/papierDechire2.png");
+
+}
+
+.job:nth-of-type(2n) {
+    transform: scaleX(-1);
+}
+.job:nth-of-type(3n) {
+    transform: scaleY(-1);
+}
+
+.job::before, .job::after{
+    height:2vw;
+    width:5vw;
+    content:" ";
+    background-color:rgba(220,220,0,0.3);
+    position:relative;
+    _border-left: thick dotted var(--fontColorDark);
+
+}
+
+.job::before{
+    right:50%;
+    top:50%;
+}
+
+.job::after{
+    left:50%;
+    bottom:50%;
+}
+
+.calendarElement:nth-of-type(2n-1) .job::before, .calendarElement:nth-of-type(3n-1) .job::after{
+    transform:  rotate(5deg) translateY(0.5vw);
+}
+
+.calendarElement:nth-of-type(3n-1) .job::before, .calendarElement:nth-of-type(2n) .job::after{
+    transform: rotate(-10deg) translateY(-0.5vw);
 }
 
 .jobName, .jobResults, .jobCompany{
     border:  var(--debugBorder) yellow;
     overflow: visible;
     white-space: nowrap;
-    width:100%;
-    transform:translateX(100%);
+    text-align:center;
     margin-left:var(--childMargin);
     margin-right:var(--childMargin);
 }
 
-.calendarElement:last-child .job .jobName, .calendarElement:last-child .job .jobCompany, .calendarElement:last-child .job .jobResults{
-    width: fit-content;
-    transform:translateX(calc(-100% - 2*var(--childMargin)));
-}
+
 
 .jobName{
-
+    font-weight: bold;
+    text-decoration-line: underline;
 }
 
 .jobResults{
-
+    font-size: calc(0.8 * var(--fontSize));
 }
 
 .jobCompany{

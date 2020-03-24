@@ -64,7 +64,7 @@
     border: none;
     border-bottom: 1px solid var(--emphasisFontColor);
     font-size: var(--fontSize);
-    font-family: var(--fontP);
+    font-family: var(--fontForm);
 }
 
 
