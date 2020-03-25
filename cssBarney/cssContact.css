@@ -1,9 +1,28 @@
 #contact .content{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.contactErrorMessage{
+    text-align:center;
+    border: thin solid black;
+    background-color:var(--navbarColor);
+    color:black;
+    padding:1vw;
+    margin:3vw;
+}
+
+.contactMessageAnswer{
+    text-align:center;
+    border: thin solid black;
+    background-color:var(--backgroundColorLight);
+    color:black;
+    padding:1vw;
+    margin:3vw;
+}
+
 
 .form-contact{
     display:flex;
@@ -67,6 +86,9 @@
     font-family: var(--fontForm);
 }
 
+.form-group input::placeholder{
+    color:lightgray;
+}
 
 
 

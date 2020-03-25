@@ -11,30 +11,56 @@
 //SKILLS DATA
 
 $adrienOrganisation =[
-    "Management d'équipe" => ["details"=>"Lorem ipsum"],
-    "Management de projet" => ["details"=>"Lorem ipsum"],
-    "Pilotage de processus" => ["details"=>"Lorem ipsum"],
-    "cycle en V" => ["details"=>"Lorem ipsum"],
-    "SCRUM" => ["details"=>"Lorem ipsum"],
+    "Management d'équipe" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Management de projet" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Pilotage de processus" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "cycle en V" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "SCRUM" => [
+        "details"=>"Lorem ipsum"
+    ],
 ];
 
 $adrienScience =[
-    "Développement de transducteurs" => ["details"=>"Lorem ipsum"],
-    "Filtrage" => ["details"=>"Lorem ipsum"],
-    "Detection de motifs" => ["details"=>"Lorem ipsum"],
-    "Correction des erreurs" => ["details"=>"Lorem ipsum"],
-    "Optimisation des procédés" => ["details"=>"Lorem ipsum"],
+    "Développement de transducteurs" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Filtrage" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Detection de motifs" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Correction des erreurs" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Optimisation des procédés" => [
+        "details"=>"Lorem ipsum"
+    ],
 ];
 
 $adrienComputer =[
-    "Java SE" => ["details"=>"Lorem ipsum"],
-    "PHP, HTML, CSS" => ["details"=>"Lorem ipsum"],
-    "Logiciel embarqué" => ["details"=>"Lorem ipsum"],
+    "Java SE" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "PHP, HTML, CSS" => [
+        "details"=>"Lorem ipsum"
+    ],
+    "Logiciel embarqué" => [
+        "details"=>"Lorem ipsum"
+    ],
 ];
 
 $adrienSkills=[
     "Sciences Physiques" => $adrienScience,
-    "Developpement Informatique" => $adrienComputer,
+    "Développement Informatique" => $adrienComputer,
     "Organisation" => $adrienOrganisation
 ];
 
@@ -42,11 +68,41 @@ $adrienSkills=[
 //EXPERIENCE DATA
 
 $adrienJobs=[
-    ["name" => "Chercheur en optique", "company" => "LUAN", "startDate" => "01-02-2004", "endDate" => "01-08-2004", "results" => "Lorem ipsum"],
-    ["name" => "Chef de projet", "company" => "FARE", "startDate" => "01-06-2005", "endDate" => "14-09-2007", "results" => "Lorem ipsum"],
-    ["name" => "Responsable de Laboratoire", "company" => "IPEV", "startDate" => "15-09-2007", "endDate" => "31-12-2008", "results" => "Lorem ipsum"],
-    ["name" => "Chef de projet", "company" => "FARE", "startDate" => "01-4-2009", "endDate" => "31-12-2014", "results" => "Lorem ipsum"],
-    ["name" => "Responsable de Laboratoire", "company" => "FARE", "startDate" => "01-01-2015", "endDate" => "31-07-2020", "results" => "Lorem ipsum"]
+    [
+        "name" => "Chercheur en optique",
+        "company" => "LUAN",
+        "startDate" => "01-02-2004",
+        "endDate" => "01-08-2004",
+        "results" => "Lorem ipsum"
+    ],
+    [
+        "name" => "Chef de projet",
+        "company" => "FARE",
+        "startDate" => "01-06-2005",
+        "endDate" => "14-09-2007",
+        "results" => "Lorem ipsum"
+    ],
+    [
+        "name" => "Responsable de Laboratoire",
+        "company" => "IPEV",
+        "startDate" => "15-09-2007",
+        "endDate" => "31-12-2008",
+        "results" => "Lorem ipsum"
+    ],
+    [
+        "name" => "Chef de projet",
+        "company" => "FARE",
+        "startDate" => "01-4-2009",
+        "endDate" => "31-12-2014",
+        "results" => "Lorem ipsum"
+    ],
+    [
+        "name" => "Responsable de Laboratoire",
+        "company" => "FARE",
+        "startDate" => "01-01-2015",
+        "endDate" => "31-07-2020",
+        "results" => "Lorem ipsum"
+    ]
 ];
 
 //SECTIONS NAMES
@@ -62,25 +118,29 @@ $adrienSectionName=[
 
 //CONTACT FORM FIELDS
 
+/**
+ * if type is bot defined, its default value is "text"
+ * if fieldName is not defined, it takes the same value as the key with every special char removed (and speces repalces by "_"
+ */
 $adrienContactForm=[
     "Nom ou Entreprise"=> [
         "type" => "text",
+        "fieldName" => "name",
         "placeholder" => "",
-        "value" => "",
         "mandatory" => true
     ],
 
     "Email"=> [
         "type" => "email",
+        "fieldName" => "email",
         "placeholder" => "",
-        "value" => "",
         "mandatory" => true
     ],
 
     "Sujet"=> [
         "type" => "text",
+        "fieldName" => "subject",
         "placeholder" => "",
-        "value" => "",
         "mandatory" => true
     ],
 ];
@@ -93,11 +153,21 @@ $adrienContactForm=[
 
 
 $various =[
-    "Fort potentiel" => ["details"=>"Presque étudiant à Harvard"],
-    "Oreille Musical" => ["details"=>"Bassiste chez 'les Bémols'"],
-    "Culture générale" => ["details"=>"Réalisation du documentaire 20000 lieues sous les bières"],
-    "Entrepreneur" => ["details"=>"Création du 'roi chasseneige'"],
-    "Grande force physique" => ["details"=>"Ancien Marines"]
+    "Fort potentiel" => [
+        "details"=>"Presque étudiant à Harvard"
+    ],
+    "Oreille Musical" => [
+        "details"=>"Bassiste chez 'les Bémols'"
+    ],
+    "Culture générale" => [
+        "details"=>"Réalisation du documentaire 20000 lieues sous les bières"
+    ],
+    "Entrepreneur" => [
+        "details"=>"Création du 'roi chasseneige'"
+    ],
+    "Grande force physique" => [
+        "details"=>"Ancien Marines"
+    ]
 ];
 
 
@@ -109,10 +179,34 @@ $barneySkills=[
 //EXPERIENCE DATA
 
 $barneyJobs=[
-    ["name" => "Bassiste", "company" => "Les bémols (Groupe de musique)", "startDate" => "01-02-2004", "endDate" => "01-08-2004", "results" => "Relance de l'activité des vitriers."],
-    ["name" => "Réalisateur", "company" => "Auto Produit", "startDate" => "01-06-2005", "endDate" => "14-09-2007", "results" => "Vu par 15 personne chez Moe"],
-    ["name" => "Entrepreneur", "company" => "Le roi chasseneige", "startDate" => "15-09-2007", "endDate" => "31-12-2008", "results" => "Route du bar déneigée"],
-    ["name" => "Marines", "company" => "Armée, corps des marines", "startDate" => "01-4-2009", "endDate" => "31-12-2014", "results" => "Amélioration de la patience des gradés"],
+    [
+        "name" => "Bassiste",
+        "company" => "Les bémols (Groupe de musique)",
+        "startDate" => "01-02-2004",
+        "endDate" => "01-08-2004",
+        "results" => "Relance de l'activité des vitriers."
+    ],
+    [
+        "name" => "Réalisateur",
+        "company" => "Auto Produit",
+        "startDate" => "01-06-2005",
+        "endDate" => "14-09-2007",
+        "results" => "Vu par 15 personnes chez Moe"
+    ],
+    [
+        "name" => "Entrepreneur",
+        "company" => "Le roi chasseneige",
+        "startDate" => "15-09-2007",
+        "endDate" => "31-12-2008",
+        "results" => "Route du bar déneigée"
+    ],
+    [
+        "name" => "Marines",
+        "company" => "Armée, corps des marines",
+        "startDate" => "01-4-2009",
+        "endDate" => "31-12-2014",
+        "results" => "Amélioration de la patience des gradés"
+    ]
 
 ];
 
@@ -129,9 +223,14 @@ $barneySectionName=[
 
 //CONTACT FORM FIELDS
 
+/**
+ * if type is bot defined, its default value is "text"
+ * if fieldName is not defined, it takes the same value as the key with every special char removed (and speces repalces by "_"
+ */
 $barneyContactForm=[
     "Nom ou Entreprise"=> [
         "type" => "text",
+        "fieldName" => "name",
         "placeholder" => "Taverne de Moe",
         "value" => "",
         "mandatory" => false
@@ -139,24 +238,28 @@ $barneyContactForm=[
 
     "Email"=> [
         "type" => "email",
+        "fieldName" => "email",
         "placeholder" => "",
-        "value" => "",
         "mandatory" => true
     ],
 
     "Sujet"=> [
         "type" => "text",
+        "fieldName" => "subject",
         "placeholder" => "",
-        "value" => "",
         "mandatory" => true
     ],
 
     "Votre bière préférée"=> [
-        "type" => "text",
-        "placeholder" => "Duff",
-        "value" => "",
-        "mandatory" => true
+
     ],
+
+    /*
+     *         "type" => "text",
+        "fieldName" => "preferedbeer",
+        "placeholder" => "Duff",
+        "mandatory" => true
+     */
 ];
 
 

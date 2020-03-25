@@ -27,7 +27,7 @@
 :root {
     --backgroundColorLight: #F5F4F4;
     --backgroundColorDark: #17BBEE;
-    --fontColorLight: #F5F4F4;
+    --fontColorLight: var(--backgroundColorLight);
     --fontColorDark: #494949;
     --emphasisFontColor: #FDD420;
     --navbarColor:#f06bbd;

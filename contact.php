@@ -1,5 +1,29 @@
 
 
+<?php $contactErrorMessage='';
+
+if($_SERVER['REQUEST_METHOD']==="POST") {
+    $contactErrorMessages=checkDataFromContactForm($activePersonData["contact"]);
+    $messageContent=$_POST["message"];
+
+    foreach ($contactErrorMessages as $mistakenField => $mistakesList){
+        foreach ($mistakesList as $mistake) {/**/
+            $contactErrorMessage.=$mistake."</br>";
+        }
+    }
+
+    if(!empty($contactErrorMessage)){ ?>
+        <div class="contactErrorMessage"><?=$contactErrorMessage ?? ''?></div>
+    <?php }else{
+        $contactMessageAnswer="Bonjour, j'ai bien bien pris connaissance de votre message '".htmlentities($_POST["message"])."'. Je vous contacterai des que je serai décemment capable de le faire. "?>
+        <div class="contactMessageAnswer"><?=$contactMessageAnswer ?? ''?></div>
+        <?php /*header('Location: index.php')*/ ?>
+    <?php } ?>
+
+<?php } ?>
+
+
+
 <form action="#" method="POST" class="form-contact">
 
     <div id="contact-info" class="contactBloc">
@@ -15,22 +39,17 @@
     <div id="userData" class="contactBloc">
 
         <?php foreach ($activePersonData["contact"] as $inputName => $inputProperties) {
-            $formCheckedData=htmlCheckedDataFormat([
-                "name"=> $inputName,
-                "mandatory" =>$inputProperties["mandatory"],
-                "type" => $inputProperties["type"],
-                "placeholder" => $inputProperties["placeholder"],
-                "value" => $inputProperties["value"]
-            ]);
+            $inputProperties=checkDataBeforeFormIntegration($inputName, $inputProperties);
+            $activePersonData["contact"]=$inputProperties;
 
-            if (!is_null($formCheckedData)) {?>
+            if (!is_null($inputProperties)) {?>
 
                 <div class="form-group">
                     <label
-                        for="<?= $formCheckedData["withoutSpace_name"] ?>"><?= $formCheckedData["name"] ?><?= $formCheckedData["mandatory"] ? '*' : '' ?></label>
-                    <input type="<?= $formCheckedData["type"] ?>" placeholder="<?= $formCheckedData["placeholder"] ?>"
-                           value="<?= $formCheckedData["value"] ?>" id="<?= $formCheckedData["withoutSpace_name"] ?>"
-                           name="<?= $formCheckedData["withoutSpace_name"] ?>" <?= $formCheckedData["mandatory"] ? 'required' : '' ?>>
+                        for="<?= $inputProperties["fieldName"] ?>"><?= $inputName ?><?= !empty($inputProperties["mandatory"]) ? '*' : '' ?></label>
+                    <input type="<?= $inputProperties["type"] ?>" placeholder="<?= $inputProperties["placeholder"]??'' ?>"
+                           value="<?= $inputProperties["value"] ?? '' ?>" id="<?= $inputProperties["fieldName"] ?>"
+                           name="<?= $inputProperties["fieldName"] ?>" <?= !empty($inputProperties["mandatory"]) ? 'required' : '' ?>>
                 </div>
 
             <?php }
@@ -41,7 +60,8 @@
 
     <div id="message" class="contactBloc form-group">
         <label for="message">Message*</label>
-        <textarea name="message" id="message" rows="7" required></textarea>
+        <textarea name="message" id="message" rows="7" required><?=$messageContent ?? '' ?></textarea>
+
     </div>
 
     <div id="button" class="contactBloc form-btn">

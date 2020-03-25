@@ -2,7 +2,7 @@
 <?php require 'tools.php' ?>
 
 <?php
-    $activePersonName="adrien";
+    $activePersonName="barney";
     if (isset($_GET["name"])) {
         if (array_key_exists(strtolower($_GET["name"]), $persons)) {
             $activePersonName=$_GET["name"];
