@@ -12,7 +12,8 @@
 
     --experienceVerticalShift:100px;
     --calendarHeight:10px;
-    --connectionLineToTimeline: thick solid black;
+    --connectionLineToTimeline: thick solid var(--h2FontColor);
+    --timeLine: thick solid var(--backgroundColorDark);
     --jobDataPadding:10px;
 
     --verticalTranslationForDataOverTimeline:translateY(calc(-5px - var(--calendarHeight) - 2 * var(--experienceVerticalShift)));
@@ -23,8 +24,9 @@
     position:relative;
     width:80%;
 
-    height:var(--calendarHeight);
-    border-bottom: thick solid black;
+    margin-top:calc(3 * var(--experienceVerticalShift));
+    margin-bottom:calc(3 * var(--experienceVerticalShift));
+
 
 }
 
@@ -35,6 +37,18 @@
     border: var(--debugBorder) red;
     width:100%;
     height:var(--calendarHeight);
+
+    border-bottom: var(--timeLine);
+}
+
+.calendarElement:nth-of-type(odd) .job{
+    border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
+    transform: translateY(200%);
+}
+
+.calendarElement:nth-of-type(even) .job{
+    border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
+    transform: translateY(-100%);
 }
 
 .job{
@@ -47,16 +61,7 @@
 
     border-left: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
     border-right: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
-}
-
-.calendarElement:nth-of-type(odd) .job{
-    border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
-    transform: translateY(200%);
-}
-
-.calendarElement:nth-of-type(even) .job{
-    border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
-    transform: translateY(-100%);
+    border-radius: 3px;
 }
 
 .jobName, .jobResults, .jobCompany{
@@ -115,19 +120,6 @@
 
     border-right: var(--connectionLineToTimeline);
     border-left:none;
-}
-
-
-
-
-
-
-
-
-
-.calendarElement:last-child .job .jobName, .calendarElement:last-child .job .jobCompany, .calendarElement:last-child .job .jobResults{
-    _width: fit-content;
-    _transform:translateX(calc(-100% - 2*var(--childMargin)));
 }
 
 .jobName{

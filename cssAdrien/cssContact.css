@@ -50,25 +50,19 @@
     text-align:center;
 }
 
-
 .form-group {
     display: flex;
     flex-direction: column;
     text-align: left;
  }
 
-
-
 .form-group input, .form-group textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--titleFontColor);
+    border-bottom: 2px solid var(--h2FontColor);
     font-size: var(--h3Size);
     font-family: var(--fontP);
 }
-
-
-
 
 #contact-info img {
     width: 50px;
@@ -78,8 +72,9 @@
 .form-btn {
     margin-top: 40px;
 }
+
 .form-btn .btn {
-    border: 1px solid var(--titleFontColor);
+    border: 2px solid var(--h2FontColor);
     padding: .85rem 1.25rem;
     transition: all .3s ease;
     border-radius: 3px;
@@ -89,8 +84,8 @@
     font-size: calc(var(--h3Size) / 2);
     font-family: var(--fontH3);
 }
+
 .form-btn .btn:hover {
-    border-color:var(--titleFontColor);
-    background-color: var(--titleFontColor);
-    color: var(--normalFontColorDark);
+    border-color:var(--h2FontColor);
+    background-color: var(--h2FontColor);
 }

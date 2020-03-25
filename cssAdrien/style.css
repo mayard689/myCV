@@ -6,18 +6,35 @@
 @import "various.css";
 @import "education.css";
 
-@import url(//db.onlinewebfonts.com/c/07342dff729e3ff82873f8eeee4c9612?family=GT+Haptik+Bold);
+@font-face {
+    font-family: "GT Haptik Bold";
+    src: url("../font/GTHaptikBold/GT-Haptik-Bold.ttf");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    src: url("../font/ubuntu/Ubuntu-Medium.ttf")
+}
+
+@font-face {
+    font-family: "stickyNote";
+    src: url("../font/sticky/Stickynotes-ywLPd.otf")
+}
 
 :root {
-    --backgroundColorLight: #f6f6f6;
-    --backgroundColorDark: #404040;
-    --titleFontColor: #db9a0c;
-    --normalFontColorDark: var(--backgroundColorDark);
+    --backgroundColorLight: #fafafa;
+    --backgroundColorDark: #333333;
+    --h1FontColor: #333333;
+    --h2FontColor: #1b75bc;
+    --normalFontColorDark: #666666;
     --normalFontColorLight: var(--backgroundColorLight);
 
-    --navbarHeight:50px;
+    --navbarHeight:100px;
+    --navbarVerticalOffset: calc(var(--navbarHeight)/4);
+    --h1Height:calc(1.8 * var(--h1Size));
 
     --referenceFontSize:2vw;
+    --h1Size:var(--referenceFontSize);
     --h2Size:3vw;
     --h3Size:calc(0.75*var(--h2Size));
     --aSize:var(--h3Size);
@@ -25,10 +42,11 @@
 
     --fontH1:"GT Haptik Bold";
     --fontH2:"GT Haptik Bold";
-    --fontH3:"GT Haptik Bold";
-    --fontSpecial:"GT Haptik Bold";
-    --fontP:arial;
-    --fontA:arial;
+    --fontH3:"ubuntu";
+    --fontSpecial:"stickyNote";
+    --fontP:"ubuntu";
+    --fontA:"ubuntu";
+
 
     /*--debugBorder: solid thin;*/
     --debugBorder: none;
@@ -46,24 +64,37 @@ body {
     font-size: var(--fontSize);
     font-family: var(--fontP);
     scroll-behavior: smooth;
+    margin-top:25px;
 }
 
+main {
+    display:flex;
+    flex-direction: column;
+}
 
+header{
+    overflow:hidden;
+    width:98vw;
+}
 
 h1 {
     position:sticky;
-    top:calc(-1 * var(--navbarHeight));/*var(--navbarHeight)*/
-    transform:translateY(var(--navbarHeight));
-
-    font-size:var(--referenceFontSize);
-    color: var(--normalFontColorDark);
+    top:calc((var(--navbarHeight) - var(--h1Height)) / 2 + var(--navbarVerticalOffset) - var(--navbarHeight));/*var(--navbarHeight)*/
+    transform:translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
+    font-size:var(--h1Size);
+    color: var(--h1FontColor);
     font-family : var(--fontH1);
-    margin:10px;
+    padding:10px;
+    z-index:20;
+    height:var(--h1Height);
+
+
+
 }
 
 h2 {
     font-size: var(--h2Size);
-    color: var(--normalFontColorDark);
+    color: var(--h2FontColor);
     font-family : var(--fontH2);
     margin:10px;
 }
@@ -90,10 +121,19 @@ section {
     flex-direction: column;
     justify-content: flex-start;
 
-    height: calc(100vh - var(--navbarHeight));
-    width:99vw;
+    min-height: calc(100vh - var(--navbarHeight));
+    width:98vw;
 
-    padding-top:var(--navbarHeight);
+    padding-top:calc(var(--navbarHeight) + var(--navbarVerticalOffset));
+}
+
+section:nth-of-type(odd){
+    color: var(--normalFontColorDark);
+    background-color: var(--backgroundColorLight);
+}
+section:nth-of-type(even){
+    color: var(--normalFontColorLight);
+    background-color: var(--backgroundColorDark);
 }
 
 .content {
@@ -105,9 +145,7 @@ section {
     width:100%;
 }
 
-body{
-    margin-top:25px;
-}
+
 
 
 

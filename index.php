@@ -4,10 +4,11 @@
 <?php
     $activePersonName="adrien";
     if (isset($_GET["name"])) {
-        if (strtolower($_GET["name"])=="barney") {
-            $activePersonName="barney";
+        if (array_key_exists(strtolower($_GET["name"]), $persons)) {
+            $activePersonName=$_GET["name"];
         }
     }
+
     $activePersonData=$persons[$activePersonName];
 ?>
 
@@ -26,14 +27,12 @@
     <body>
 
         <header>
-        </header>
 
-            <div class="afterNavbar"></div>
             <nav class="smallNavbar">
                 <?php include 'navbar.php' ?>
             </nav>
 
-
+        </header>
 
         <main>
 

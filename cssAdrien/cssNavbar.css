@@ -1,39 +1,16 @@
-/*
-.smallNavbar h1 {
-    font-size: 20px;
-    margin-top:0;
-    margin-bottom:0;
-}
-
-.smallNavbar h2 {
-    font-size: calc(var(--h2Size)/3);
-    margin-top:0;
-    margin-bottom:0;
-}
-*/
-
-.afterNavbar {
-    content:" ";
-    position: absolute;
-    width: 100%;
-    height: calc(2*var(--navbarHeight));
-    top: 0px;
-    background-color: blue;
-    z-index:-10;
-}
 
 .smallNavbar {
 
     display:flex;
     flex-direction: row;
-
-    position: sticky;
-    top:0px;
+align-items: center;
+    position: fixed;
+    top:var(--navbarVerticalOffset);
     left:0px;
     width: 100%;
     height: var(--navbarHeight);
 
-    background-color: blue;
+    background-color: var(--h2FontColor);
     z-index:10;
 }
 
