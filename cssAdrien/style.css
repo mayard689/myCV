@@ -22,12 +22,14 @@
 }
 
 :root {
-    --backgroundColorLight: #fafafa;
+    --backgroundColorLight: #f4f4f4;/*initial:#fafafa*/
     --backgroundColorDark: #333333;
     --h1FontColor: #333333;
-    --h2FontColor: #1b75bc;
+    --h2FontColor: #1b75bc;/*couleur initiale #1b75bc*/ /*other attemp:#9B8578*/
     --normalFontColorDark: #666666;
     --normalFontColorLight: var(--backgroundColorLight);
+    --detailColor1:#1b75bc;
+    --detailColor2:#F73B00;
 
     --navbarHeight:100px;
     --navbarVerticalOffset: calc(var(--navbarHeight)/4);
@@ -38,7 +40,7 @@
     --h2Size:3vw;
     --h3Size:calc(0.75*var(--h2Size));
     --aSize:var(--h3Size);
-    --fontSize:calc(0.75*var(--h3Size));
+    --fontSize:calc(0.60*var(--h3Size));
 
     --fontH1:"GT Haptik Bold";
     --fontH2:"GT Haptik Bold";
@@ -58,6 +60,10 @@
     box-sizing: border-box;
 }
 
+html{
+    display:flex;
+    justify-content: center;
+}
 body {
     background-color: var(--backgroundColorLight);
     color: var(--normalFontColorDark);
@@ -65,11 +71,16 @@ body {
     font-family: var(--fontP);
     scroll-behavior: smooth;
     margin-top:25px;
+
+    width:1500px;
+
 }
 
 main {
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
@@ -79,7 +90,8 @@ header{
 
 h1 {
     position:sticky;
-    top:calc((var(--navbarHeight) - var(--h1Height)) / 2 + var(--navbarVerticalOffset) - var(--navbarHeight));/*var(--navbarHeight)*/
+    top:calc((var(--navbarHeight) - var(--h1Height)) / 2 + var(--navbarVerticalOffset) - var(--navbarHeight) + 0.15vw);/*var(--navbarHeight)*/
+    left:0;
     transform:translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
     font-size:var(--h1Size);
     color: var(--h1FontColor);
@@ -87,7 +99,8 @@ h1 {
     padding:10px;
     z-index:20;
     height:var(--h1Height);
-
+    align-self: start;
+    _justify-self: start;
 
 
 }
@@ -104,6 +117,7 @@ h3 {
     color: var(--normalFontColorDark);
     font-family : var(--fontH3);
     margin:10px;
+
 }
 
 a {
@@ -122,18 +136,42 @@ section {
     justify-content: flex-start;
 
     min-height: calc(100vh - var(--navbarHeight));
-    width:98vw;
+    wwidth:98vw;
+    width:100%;/**/
 
     padding-top:calc(var(--navbarHeight) + var(--navbarVerticalOffset));
+    position:relative;
 }
 
 section:nth-of-type(odd){
     color: var(--normalFontColorDark);
     background-color: var(--backgroundColorLight);
 }
+
+_section:nth-of-type(even):before{
+    content:" ";
+    background: url("../images/adrien/dechirebas.png");
+    width:200%;
+    height:130px;
+    position:absolute;
+    top:0;
+}
+
+_section:nth-of-type(even):after{
+    content:" ";
+
+    _background-color:var(--backgroundColorDark);
+    _background-repeat:no-repeat;
+    background: url("../images/adrien/dechirehaut.png");
+    width:200%;
+    height:130px;
+    position:absolute;
+    bottom:0px;
+}
+
 section:nth-of-type(even){
     color: var(--normalFontColorLight);
-    background-color: var(--backgroundColorDark);
+    background-color: var(--backgroundColorDark)
 }
 
 .content {

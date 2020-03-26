@@ -4,10 +4,11 @@
     flex-direction: column;
 
     margin-top:00px;
-    margin-left:50px;
+    margin-left:0px;
 }
 
 .calendar{
+
     border: var(--debugBorder) blue;
 
     --experienceVerticalShift:100px;
@@ -26,8 +27,24 @@
 
     margin-top:calc(3 * var(--experienceVerticalShift));
     margin-bottom:calc(3 * var(--experienceVerticalShift));
+    margin-left:10vw;
 
+}
 
+.calendar:before, .calendar:after{
+    position:absolute;
+    top:calc(-1 * var(--calendarHeight) /2 + 3px);
+    height: calc(2 * var(--calendarHeight));
+    width: calc(2 * var(--calendarHeight));
+    min-height:10px;
+    min-width:10px;
+    content:" ";
+    background:var(--backgroundColorDark);
+    border-radius: 50%;
+}
+
+.calendar:after{
+    right:0;
 }
 
 .calendarElement{
@@ -123,14 +140,21 @@
 }
 
 .jobName{
-    font-familly:var(--fontSpecial);
-}
-
-.jobResults{
-
+    font-family: "stickyNote";
+    font-size:calc(0.8 * var(--h3Size));
+    color:var(--detailColor2);
+    text-shadow: #f73b00;
 }
 
 .jobCompany{
-    _font-size: 25px;/*calc( 0.75 * var(--fontSize));*/
-
+    font-family: "GT Haptik Bold";
+    font-size:calc(0.75 * var(--fontSize));
 }
+
+.jobResults{
+    font-family: var(--fontP);
+    font-size:calc(0.5 * var(--fontSize));
+}
+
+
+

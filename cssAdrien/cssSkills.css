@@ -1,0 +1,138 @@
+#skills .content{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding:10vw;
+
+    height:auto;
+}
+
+.skillFamily{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position:relative;
+    overflow: visible;
+
+    _min-width:300px;
+    _min-height:300px;
+
+    margin:10vw;
+
+
+    --familyCircleWidth:15vw;/*18vw;*/
+    --sphereShadowPosition:calc(var(--familyCircleWidth) / 3);
+    --sphereColor:#5cabff;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: var(--familyCircleWidth);
+    width: var(--familyCircleWidth);
+    margin: 0;
+    _background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);
+    background:var(--detailColor1);
+    border:thick dotted var(--backgroundColorDark);
+
+}
+
+.skillFamily h3{
+    width:100%;
+    text-align: center;
+
+    padding-top:30%;
+
+    color:var(--backgroundColorDark);
+    font-size: calc(0.8 * var(--h3Size));
+
+}
+
+.skillFamily:nth-of-type(1){
+    align-self: start;
+}
+
+.skillFamily:nth-of-type(2){
+    align-self: end;
+}
+
+.skillFamily:nth-of-type(3){
+    align-self: center;
+}
+
+.skillList{
+    _position:absolute;
+}
+
+.skill{
+    position:absolute;
+    top:0;
+    left:0;
+
+    --circleWidth:calc(0.6 * var(--familyCircleWidth));/*9vw;*/
+    --sphereShadowPosition:calc(var(--circleWidth) / 3);
+    --sphereColor:pink;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: var(--circleWidth);
+    width: var(--circleWidth);
+    margin: 0;
+    _background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);
+    background:var(--normalFontColorLight);
+    border:thick dotted var(--normalFontColorDark);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
+    text-align:center;
+}
+
+
+
+.skill:nth-of-type(1){
+    top:calc(0.2 * var(--familyCircleWidth) / 1.8);
+    left:calc(1.8 * var(--familyCircleWidth) / 1.8);
+}
+
+.skill:nth-of-type(2n){
+    top:calc(-0.5 * var(--familyCircleWidth) / 1.8);
+    left:calc(1.2 * var(--familyCircleWidth) / 1.8);
+}
+
+.skill:nth-of-type(3n){
+    top:calc(1.1 * var(--familyCircleWidth) / 1.8);
+    left:calc(-0.3 * var(--familyCircleWidth) / 1.8);
+}
+
+.skill:nth-of-type(4n){
+    top:calc(-0.5 * var(--familyCircleWidth) / 1.8);
+    left:calc(-0.6 * var(--familyCircleWidth) / 1.8);
+}
+
+.skill:nth-of-type(5n){
+    top:calc(1.5 * var(--familyCircleWidth) / 1.8);
+    left:calc(0.9 * var(--familyCircleWidth) / 1.8);
+
+}
+
+.skill h4{
+    font-size:calc(1 * var(--fontSize));
+    color:var(--detailColor1);
+    font-family: "stickyNote";
+}
+
+.skillDataList{
+    display:none;
+}
+
+/*
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 0;
+    background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+ */
