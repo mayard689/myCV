@@ -3,7 +3,11 @@
     height:50vh;
     display:flex;
     align-items: center;
+
+    _background: no-repeat 100% 120%/70% url("../images/adrien/atom-mini.png"), no-repeat 100% 50%/100% url("../images/adrien/graph-mini.png");
 }
+
+
 
 /**/
 .ID {

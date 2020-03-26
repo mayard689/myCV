@@ -4,6 +4,8 @@
     flex-wrap: wrap;
 
     padding:10vw;
+    padding-top:5vw;
+    padding-bottom:5vw;
 
     height:auto;
 }
@@ -16,13 +18,13 @@
     position:relative;
     overflow: visible;
 
-    _min-width:300px;
-    _min-height:300px;
+    /*min-width:40%;
+    min-height:40%;*/
 
-    margin:10vw;
+    margin:1vw;
 
 
-    --familyCircleWidth:15vw;/*18vw;*/
+    --familyCircleWidth:12vw;/*18vw;*/
     --sphereShadowPosition:calc(var(--familyCircleWidth) / 3);
     --sphereColor:#5cabff;
     display: block;
@@ -30,8 +32,8 @@
     border-radius: 50%;
     height: var(--familyCircleWidth);
     width: var(--familyCircleWidth);
-    margin: 0;
-    _background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);
+    /*margin: 0;*/
+    /*background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);*/
     background:var(--detailColor1);
     border:thick dotted var(--backgroundColorDark);
 
@@ -57,7 +59,7 @@
 }
 
 .skillFamily:nth-of-type(3){
-    align-self: center;
+    align-self: start;
 }
 
 .skillList{
@@ -78,9 +80,19 @@
     height: var(--circleWidth);
     width: var(--circleWidth);
     margin: 0;
-    _background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);
-    background:var(--normalFontColorLight);
+    /*code for 3D sphere effect*/
+    /*background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);*/
+    /*code for gray circle with dotted border*/
+    background:no-repeat center/105% var(--normalFontColorLight);
     border:thick dotted var(--normalFontColorDark);
+
+    /*attemp for sketchy circle border*/
+    /*
+    background:no-repeat center/105% transparent;
+    background-image: url("../images/adrien/orangeFullSketchyCircle.png");
+    */
+
+
 
     display:flex;
     justify-content: center;

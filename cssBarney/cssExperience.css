@@ -60,8 +60,6 @@
     content:" ";
     background-color:rgba(220,220,0,0.3);
     position:relative;
-    _border-left: thick dotted var(--fontColorDark);
-
 }
 
 .job::before{
@@ -91,6 +89,9 @@
     margin-right:var(--childMargin);
 }
 
+.jobStart{
+    display:none;
+}
 
 
 .jobName{
@@ -104,4 +105,25 @@
 
 .jobCompany{
 
+}
+
+@media only screen and (max-width: 700px) {
+    .calendar{
+        width:95%;
+        margin:1vw;
+        background-image: none;
+    }
+
+
+    .job{
+        width:90vw !important;
+        margin:1vw;
+        white-space: pre-wrap;
+        height:25vw;
+    }
+
+    .jobName, .jobResults, .jobCompany{
+        white-space: pre-wrap;
+        font-size:calc(0.5 * var(--fontSize));
+    }
 }

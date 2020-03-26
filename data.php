@@ -73,35 +73,35 @@ $adrienJobs=[
         "company" => "LUAN",
         "startDate" => "01-02-2004",
         "endDate" => "01-08-2004",
-        "results" => "Lorem ipsum"
+        "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ],
     [
         "name" => "Chef de projet",
         "company" => "FARE",
         "startDate" => "01-06-2005",
         "endDate" => "14-09-2007",
-        "results" => "Lorem ipsum"
+        "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ],
     [
         "name" => "Responsable de Laboratoire",
         "company" => "IPEV",
         "startDate" => "15-09-2007",
         "endDate" => "31-12-2008",
-        "results" => "Lorem ipsum"
+        "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ],
     [
         "name" => "Chef de projet",
         "company" => "FARE",
         "startDate" => "01-4-2009",
         "endDate" => "31-12-2014",
-        "results" => "Lorem ipsum"
+        "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ],
     [
         "name" => "Responsable de Laboratoire",
         "company" => "FARE",
         "startDate" => "01-01-2015",
         "endDate" => "31-07-2020",
-        "results" => "Lorem ipsum"
+        "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ]
 ];
 
@@ -254,12 +254,7 @@ $barneyContactForm=[
 
     ],
 
-    /*
-     *         "type" => "text",
-        "fieldName" => "preferedbeer",
-        "placeholder" => "Duff",
-        "mandatory" => true
-     */
+
 ];
 
 

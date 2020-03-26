@@ -29,7 +29,7 @@
     --normalFontColorDark: #666666;
     --normalFontColorLight: var(--backgroundColorLight);
     --detailColor1:#1b75bc;
-    --detailColor2:#F73B00;
+    --detailColor2: #db9a0c;
 
     --navbarHeight:100px;
     --navbarVerticalOffset: calc(var(--navbarHeight)/4);
@@ -37,10 +37,10 @@
 
     --referenceFontSize:2vw;
     --h1Size:var(--referenceFontSize);
-    --h2Size:3vw;
-    --h3Size:calc(0.75*var(--h2Size));
+    --h2Size:calc(1.5 * var(--referenceFontSize));
+    --h3Size:calc(0.75 * var(--h2Size));
+    --fontSize:calc(0.50 * var(--h3Size));
     --aSize:var(--h3Size);
-    --fontSize:calc(0.60*var(--h3Size));
 
     --fontH1:"GT Haptik Bold";
     --fontH2:"GT Haptik Bold";
@@ -91,8 +91,8 @@ header{
 h1 {
     position:sticky;
     top:calc((var(--navbarHeight) - var(--h1Height)) / 2 + var(--navbarVerticalOffset) - var(--navbarHeight) + 0.15vw);/*var(--navbarHeight)*/
-    left:0;
-    transform:translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
+
+    transform:translateX(-200px) translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
     font-size:var(--h1Size);
     color: var(--h1FontColor);
     font-family : var(--fontH1);
@@ -100,9 +100,6 @@ h1 {
     z-index:20;
     height:var(--h1Height);
     align-self: start;
-    _justify-self: start;
-
-
 }
 
 h2 {
@@ -117,7 +114,6 @@ h3 {
     color: var(--normalFontColorDark);
     font-family : var(--fontH3);
     margin:10px;
-
 }
 
 a {

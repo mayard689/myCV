@@ -1,8 +1,26 @@
 #contact .content{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contactErrorMessage{
+    text-align:center;
+    border: thin solid black;
+    background-color:var(--detailColor2);
+    color:black;
+    padding:1vw;
+    margin:3vw;
+}
+
+.contactMessageAnswer{
+    text-align:center;
+    border: thin solid black;
+    background-color:var(--backgroundColorLight);
+    color:black;
+    padding:1vw;
+    margin:3vw;
 }
 
 .form-contact{
@@ -23,7 +41,8 @@
     flex-direction:column;
     justify-content: space-between;
 
-    min-width:calc(100%/3.5);
+    max-width:450px;
+    min-width:350px;
     margin: 20px;
 }
 
@@ -62,6 +81,7 @@
     border-bottom: 2px solid var(--h2FontColor);
     font-size: var(--h3Size);
     font-family: var(--fontP);
+    color:var(--fontColorLight);
 }
 
 #contact-info img {

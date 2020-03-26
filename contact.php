@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']==="POST") {
 
 
 
-<form action="#" method="POST" class="form-contact">
+<form action="#contact" method="POST" class="form-contact">
 
     <div id="contact-info" class="contactBloc">
         <p class="item-info"><?=$persons[$activePersonName]["completeName"]?></p>

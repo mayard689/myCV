@@ -17,6 +17,7 @@
                 <DIV class="jobName"><?=$job['name']?></DIV>
                 <DIV class="jobCompany"><?=$job['company']?></DIV>
                 <DIV class="jobResults"><?=$job['results']?></DIV>
+                <DIV class="jobStart"><?=$job['startDate']?></DIV>
             </DIV>
 
 

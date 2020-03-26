@@ -59,12 +59,12 @@
 }
 
 .calendarElement:nth-of-type(odd) .job{
-    border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
+    /*border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
     transform: translateY(200%);
 }
 
 .calendarElement:nth-of-type(even) .job{
-    border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
+    /*border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
     transform: translateY(-100%);
 }
 
@@ -76,10 +76,14 @@
     height:var(--calendarHeight);
     background-size: contain;
 
-    border-left: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
-    border-right: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
-    border-radius: 3px;
+    /*border-left: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
+    /*border-right: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
+
+    border-radius: 5px;
+    border: var(--connectionLineToTimeline);
+    height:0;
 }
+
 
 .jobName, .jobResults, .jobCompany{
     display:flex; flex-direction:column;
@@ -98,7 +102,6 @@
     padding-left:var(--jobDataPadding);
     padding-right:var(--jobDataPadding);
 }
-
 
 /* jobs below the timeline */
 .calendarElement:nth-of-type(odd) .job .jobName, .calendarElement:nth-of-type(odd) .job .jobCompany, .calendarElement:nth-of-type(odd) .job .jobResults {
@@ -127,6 +130,7 @@
 
     border-right: var(--connectionLineToTimeline);;
     border-left:none;
+    text-align: right;
 }
 
 /* second job child modulo 2 */
@@ -137,6 +141,7 @@
 
     border-right: var(--connectionLineToTimeline);
     border-left:none;
+    text-align: right;
 }
 
 .jobName{
@@ -154,7 +159,25 @@
 .jobResults{
     font-family: var(--fontP);
     font-size:calc(0.5 * var(--fontSize));
+    width: 15vw;
+    white-space: pre-wrap;
 }
 
+.jobStart{
+    font-family: var(--fontP);
+    font-size:calc(0.5 * var(--fontSize));
+    width: min-content;
+    white-space: pre-wrap;
+    background : var(--detailColor2);
+    position:absolute;
+    top:-60px;
+    padding:3px;
+    color:black;
+    border-left: thick solid black;
+}
+
+.calendarElement:nth-of-type(4n+2) .job .jobStart{
+    top:-30px;
+}
 
 
