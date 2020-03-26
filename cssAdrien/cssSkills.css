@@ -11,23 +11,18 @@
 }
 
 .skillFamily{
+    position:relative;
+
     display:flex;
     justify-content: space-around;
     align-items: center;
 
-    position:relative;
-    overflow: visible;
-
-    /*min-width:40%;
-    min-height:40%;*/
-
     margin:1vw;
 
-
-    --familyCircleWidth:12vw;/*18vw;*/
+    --familyCircleWidth:11vw;/*18vw;*/
     --sphereShadowPosition:calc(var(--familyCircleWidth) / 3);
     --sphereColor:#5cabff;
-    display: block;
+    /*display: block;*/
     background: black;
     border-radius: 50%;
     height: var(--familyCircleWidth);
@@ -39,16 +34,7 @@
 
 }
 
-.skillFamily h3{
-    width:100%;
-    text-align: center;
 
-    padding-top:30%;
-
-    color:var(--backgroundColorDark);
-    font-size: calc(0.8 * var(--h3Size));
-
-}
 
 .skillFamily:nth-of-type(1){
     align-self: start;
@@ -74,17 +60,17 @@
     --circleWidth:calc(0.6 * var(--familyCircleWidth));/*9vw;*/
     --sphereShadowPosition:calc(var(--circleWidth) / 3);
     --sphereColor:pink;
-    display: block;
+    /*display: block;*/
     background: black;
     border-radius: 50%;
     height: var(--circleWidth);
     width: var(--circleWidth);
-    margin: 0;
+    /*margin: 0;*/
     /*code for 3D sphere effect*/
     /*background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);*/
     /*code for gray circle with dotted border*/
     background:no-repeat center/105% var(--normalFontColorLight);
-    border:thick dotted var(--normalFontColorDark);
+    border:thin dotted var(--normalFontColorDark);
 
     /*attemp for sketchy circle border*/
     /*
@@ -129,10 +115,28 @@
 
 }
 
-.skill h4{
-    font-size:calc(1 * var(--fontSize));
-    color:var(--detailColor1);
+.skillFamily h3{
+    width:100%;
+    text-align: center;
+
+    /*color:var(--backgroundColorDark);
+    font-size: calc(0.8 * var(--h3Size));*/
+
     font-family: "stickyNote";
+    font-size:calc(0.8 * var(--h3Size));
+    color:var(--detailColor2);
+    text-shadow: #f73b00;
+}
+
+.skill h4{
+    /*font-size:calc(1 * var(--fontSize));
+    color:var(--detailColor1);
+    font-family: "stickyNote";*/
+
+    font-family: "GT Haptik Bold";
+    font-size:calc(0.75 * var(--fontSize));
+    color:var(--normalFontColorDark);
+
 }
 
 .skillDataList{
