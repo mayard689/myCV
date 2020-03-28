@@ -31,6 +31,8 @@
     margin-bottom:calc(3 * var(--experienceVerticalShift));
     margin-left:10vw;
 
+    border-bottom: thick solid  var(--backgroundColorDark);
+    height:var(--calendarHeight);
 }
 
 .calendar:before, .calendar:after{
@@ -49,31 +51,24 @@
     right:0;
 }
 
-.calendarElement{
-    position:absolute;
-    top:0;
 
-    border: var(--debugBorder) red;
-    width:100%;
-    height:var(--calendarHeight);
-
-    border-bottom: var(--timeLine);
-}
-
-.calendarElement:nth-of-type(odd) .job{
+.job:nth-of-type(odd){
     /*border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
     transform: translateY(200%);
 }
 
-.calendarElement:nth-of-type(even) .job{
+.job:nth-of-type(even){
     /*border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
     transform: translateY(-100%);
 }
 
 .job{
+    position:absolute;
+    top:0;
+
     display:flex;
     flex-direction: column;
-    position:relative;
+    _position:relative;
     border:  var(--debugBorder) green;
     height:var(--calendarHeight);
     background-size: contain;
@@ -106,28 +101,28 @@
 }
 
 /* jobs below the timeline */
-.calendarElement:nth-of-type(odd) .job .jobName, .calendarElement:nth-of-type(odd) .job .jobCompany, .calendarElement:nth-of-type(odd) .job .jobResults {
+.job:nth-of-type(odd) .jobName, .job:nth-of-type(odd) .jobCompany, .job:nth-of-type(odd) .jobResults {
     transform:translateX(50%) var(--verticalTranslationForDataBelowTimeline);
 }
 
-.calendarElement:nth-of-type(odd) .job .jobName::before {
+.job:nth-of-type(odd) .jobName::before {
     content:" ";
     height:var(--experienceVerticalShift) ;
 }
 
 /* jobs over the timeline */
-.calendarElement:nth-of-type(even) .job .jobName, .calendarElement:nth-of-type(even) .job .jobCompany, .calendarElement:nth-of-type(even) .job .jobResults {
+.job:nth-of-type(even) .jobName, .job:nth-of-type(even) .jobCompany, .job:nth-of-type(even) .jobResults {
     transform:var(--horizontalTranslationForDataOnTheRight) var(--verticalTranslationForDataOverTimeline);
 }
 
-.calendarElement:nth-of-type(even) .job .jobResults:after {
+.job:nth-of-type(even) .jobResults:after {
     content:" ";
     height:calc(var(--experienceVerticalShift) - 45px) ;/*******************************************************************************************************************************************/
 }
 
 /* first (means 'first displayed') job child modulo 4 */
 /* displayed on the left of their parents center line / below the timeline */
-.calendarElement:nth-of-type(4n+1) .job .jobName, .calendarElement:nth-of-type(4n+1) .job .jobCompany, .calendarElement:nth-of-type(4n+1) .job .jobResults {
+.job:nth-of-type(4n+1) .jobName, .job:nth-of-type(4n+1) .jobCompany, .job:nth-of-type(4n+1) .jobResults {
     transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataBelowTimeline);
 
     border-right: var(--connectionLineToTimeline);;
@@ -137,7 +132,7 @@
 
 /* second job child modulo 2 */
 /* displayed on the left of their parents center line / over the timeline */
-.calendarElement:nth-of-type(4n+2) .job .jobName, .calendarElement:nth-of-type(4n+2) .job .jobCompany, .calendarElement:nth-of-type(4n+2) .job .jobResults {
+.job:nth-of-type(4n+2) .jobName, .job:nth-of-type(4n+2) .jobCompany, .job:nth-of-type(4n+2) .jobResults {
 
     transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataOverTimeline);
 
@@ -179,7 +174,7 @@
     border-left: thick solid black;
 }
 
-.calendarElement:nth-of-type(4n+2) .job .jobStart{
+.job:nth-of-type(4n+2) .jobStart{
     top:-30px;
 }
 
