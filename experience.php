@@ -14,7 +14,7 @@
                 $width=100*($end-$start)/($max-$min);
             ?>
             <DIV class="job" style="left: <?=$left?>%; width: <?=$width?>%;">
-                <DIV class="jobName"><?=$job['name']?></DIV>
+                <h3 class="jobName"><?=$job['name']?></h3>
                 <DIV class="jobCompany"><?=$job['company']?></DIV>
                 <DIV class="jobResults"><?=$job['results']?></DIV>
                 <DIV class="jobStart"><?=$job['startDate']?></DIV>

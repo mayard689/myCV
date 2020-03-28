@@ -13,7 +13,7 @@
 
     --experienceVerticalShift:90px;/*100******************************************************************************************************************************************/
     --calendarHeight:10px;
-    --connectionLineToTimeline: thick solid var(--h2FontColor);
+    --connectionLineToTimeline: thick solid var(--FontColor2);
     --timeLine: thick solid var(--backgroundColorDark);
     --jobDataPadding:10px;
 
@@ -151,6 +151,7 @@
     font-size:calc(0.8 * var(--h3Size));
     color:var(--detailColor2);
     text-shadow: #f73b00;
+    margin:0;
 }
 
 .jobCompany{

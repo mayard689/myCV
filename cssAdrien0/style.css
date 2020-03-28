@@ -4,12 +4,9 @@
 @import "cssWhoami.css";
 @import "cssExperience.css";
 @import "various.css";
-@import "education.css";
+@import "cssEducation.css";
 
-@font-face {
-    font-family: "_GT Haptik Bold";
-    src: url("../font/GTHaptikBold/GT-Haptik-Bold.ttf");
-}
+
 
 @font-face {
     font-family: "ubuntu";
@@ -23,13 +20,16 @@
 
 @font-face {
     font-family: "GT Haptik Bold";
-    src: url("../font/odachi/Odachi.otf")
+    src: url("../font/daniel/daniel.ttf")
 }
+
 :root {
-    --backgroundColorLight: #f4f4f4;/*initial:#fafafa*/
+    --backgroundColorLight: Snow;
     --backgroundColorDark: #333333;
-    --h1FontColor: #333333;
-    --h2FontColor: #1b75bc;/*couleur initiale #1b75bc*/ /*other attemp:#9B8578*/
+
+    --FontColor1: fireBrick;
+    --FontColor2: #1b75bc;/*couleur initiale #1b75bc*/ /*other attemp:#9B8578*/
+
     --normalFontColorDark: #666666;
     --normalFontColorLight: var(--backgroundColorLight);
     --detailColor1:#1b75bc;
@@ -53,6 +53,9 @@
     --fontP:"ubuntu";
     --fontA:"ubuntu";
 
+    --h3margin:10px;
+    --h3Color:var(--FontColor1);
+
 
     /*--debugBorder: solid thin;*/
     --debugBorder: none;
@@ -68,6 +71,7 @@ html{
     display:flex;
     justify-content: center;
 }
+
 body {
     background-color: var(--backgroundColorLight);
     color: var(--normalFontColorDark);
@@ -95,30 +99,34 @@ header{
 h1 {
     position:sticky;
     top:calc((var(--navbarHeight) - var(--h1Height)) / 2 + var(--navbarVerticalOffset) - var(--navbarHeight) + 0.15vw);/*var(--navbarHeight)*/
+    transform:translateX(-100px) translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
 
-    transform:translateX(-200px) translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
-    font-size:var(--h1Size);
-    color: var(--h1FontColor);
-    font-family : var(--fontH1);
-    padding:10px;
     z-index:20;
     height:var(--h1Height);
     align-self: start;
+
+    color: var(--FontColor1);
+    font-size:var(--h1Size);
+    font-family : var(--fontH1);
+    padding:10px;
+
 }
 
 h2 {
     font-size: var(--h2Size);
-    color: var(--h2FontColor);
+    color: var(--FontColor2);
     font-family : var(--fontH2);
     margin:10px;
 }
 
 h3 {
     font-size: var(--h3Size);
-    color: var(--normalFontColorDark);
+    color: var(--h3Color);
     font-family : var(--fontH3);
-    margin:10px;
+    margin:var(--h3margin);
 }
+
+
 
 a {
     font-size: var(--aSize);
@@ -148,6 +156,12 @@ section:nth-of-type(odd){
     background-color: var(--backgroundColorLight);
 }
 
+
+section:nth-of-type(even){
+    color: var(--normalFontColorDark);
+    background-color: var(--backgroundColorLight);
+}
+
 _section:nth-of-type(even):before{
     content:" ";
     background: url("../images/adrien/dechirebas.png");
@@ -167,11 +181,6 @@ _section:nth-of-type(even):after{
     height:130px;
     position:absolute;
     bottom:0px;
-}
-
-section:nth-of-type(even){
-    color: var(--normalFontColorLight);
-    background-color: var(--backgroundColorDark)
 }
 
 .content {

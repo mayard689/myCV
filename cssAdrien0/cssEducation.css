@@ -1,0 +1,64 @@
+
+#education .content{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.diploma{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    position:relative;
+
+
+}
+
+.diploma h3{
+    white-space: nowrap;
+}
+
+.diplomaData{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.diploma_school{
+    font-size: var(--h3Size);
+    color: var(--h3Color);
+    font-family : var(--fontH3);
+    margin:var(--h3margin);
+
+    width:auto;
+}
+
+.diploma_date{
+    font-size: var(--h3Size);
+    color: var(--h3Color);
+    font-family : var(--fontH3);
+    margin:var(--h3margin);
+
+}
+
+.diploma_details{
+
+    _position:absolute;
+    left:0;
+
+    width:95%;
+    flex-shrink: 0;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+
+    align-self: end;
+
+
+}
+
+.diploma_detail{
+}

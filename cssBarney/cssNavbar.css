@@ -1,6 +1,6 @@
 
 
-.smallNavbar
+.navbar
 {
     display:flex;
     justify-content: center;
@@ -40,7 +40,7 @@
 /*Mobile Version */
 @media screen and (max-width: 700px) {
 
-    .smallNavbar {
+    .navbar {
         margin-bottom: 10%;
     }
 
@@ -74,7 +74,7 @@
         background-color: var(--navbarColor);
     }
 
-    .smallNavbar a {
+    .navbar a {
         font-size: 1em;
     }
 

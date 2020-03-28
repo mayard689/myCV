@@ -1,5 +1,5 @@
 
-.smallNavbar {
+.navbar {
 
     display:flex;
     flex-direction: row;
@@ -10,13 +10,13 @@ align-items: center;
     width: 100%;
     height: var(--navbarHeight);
 
-    background-color: var(--h2FontColor);
+    background-color: var(--FontColor2);
     z-index:10;
 }
 
 .menuBurger:before {
     content:" ";
-    width : calc(100vw/7);
+    width : calc(100vw/6);
 }
 
 .menuBurger{

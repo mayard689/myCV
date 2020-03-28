@@ -28,8 +28,8 @@
 :root {
     --backgroundColorLight: #f4f4f4;/*initial:#fafafa*/
     --backgroundColorDark: #333333;
-    --h1FontColor: #333333;
-    --h2FontColor: #1b75bc;/*couleur initiale #1b75bc*/ /*other attemp:#9B8578*/
+    --FontColor1: #333333;
+    --FontColor2: #1b75bc;/*couleur initiale #1b75bc*/ /*other attemp:#9B8578*/
     --normalFontColorDark: #666666;
     --normalFontColorLight: var(--backgroundColorLight);
     --detailColor1:#1b75bc;
@@ -98,7 +98,7 @@ h1 {
 
     transform:translateX(-200px) translateY(calc(var(--navbarHeight)));/* + var(--navbarVerticalOffset)));*/
     font-size:var(--h1Size);
-    color: var(--h1FontColor);
+    color: var(--FontColor1);
     font-family : var(--fontH1);
     padding:10px;
     z-index:20;
@@ -108,7 +108,7 @@ h1 {
 
 h2 {
     font-size: var(--h2Size);
-    color: var(--h2FontColor);
+    color: var(--FontColor2);
     font-family : var(--fontH2);
     margin:10px;
 }

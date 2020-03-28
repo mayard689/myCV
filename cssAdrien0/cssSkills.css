@@ -1,155 +1,37 @@
 #skills .content{
     display:flex;
-    flex-direction: row;/*column*/
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+    _flex-wrap: wrap;
 
-    padding-left:10vw;
-    padding-right:10vw;
-    padding-top:0;
-    padding-bottom:0;
 
-    height:auto;
 }
 
 .skillFamily{
-    position:relative;
-
     display:flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
+ }
 
-    margin:5vw;/*1vw*/
-
-    --familyCircleWidth:11vw;/*18vw;*/
-    --sphereShadowPosition:calc(var(--familyCircleWidth) / 3);
-    --sphereColor:#5cabff;
-    /*display: block;*/
-    background: black;
-    border-radius: 50%;
-    height: var(--familyCircleWidth);
-    width: var(--familyCircleWidth);
-    /*margin: 0;*/
-    /*background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);*/
-    background:var(--detailColor1);
-    border:thick dotted var(--backgroundColorDark);
-
-}
-
-
-
-.skillFamily:nth-of-type(1){
-    align-self: start;
-}
-
-.skillFamily:nth-of-type(2){
-    align-self: end;
-}
-
-.skillFamily:nth-of-type(3){
-    align-self: start;
+.skill h3{
+    white-space: nowrap;
 }
 
 .skillList{
-    _position:absolute;
+    display:flex;
 }
 
 .skill{
-    position:absolute;
-    top:0;
-    left:0;
-
-    --circleWidth:calc(0.6 * var(--familyCircleWidth));/*9vw;*/
-    --sphereShadowPosition:calc(var(--circleWidth) / 3);
-    --sphereColor:pink;
-    /*display: block;*/
-    background: black;
-    border-radius: 50%;
-    height: var(--circleWidth);
-    width: var(--circleWidth);
-    /*margin: 0;*/
-    /*code for 3D sphere effect*/
-    /*background: radial-gradient(circle at var(--sphereShadowPosition) var(--sphereShadowPosition), var(--sphereColor), #000);*/
-    /*code for gray circle with dotted border*/
-    background:no-repeat center/105% var(--normalFontColorLight);
-    border:thin dotted var(--normalFontColorDark);
-
-    /*attemp for sketchy circle border*/
-    /*
-    background:no-repeat center/105% transparent;
-    background-image: url("../images/adrien/orangeFullSketchyCircle.png");
-    */
-
-
-
+    margin:10px;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    white-space: pre-wrap;
-    text-align:center;
+    justify-content: center ;
 }
 
 
-
-.skill:nth-of-type(1){
-    top:calc(0.2 * var(--familyCircleWidth) / 1.8);
-    left:calc(1.8 * var(--familyCircleWidth) / 1.8);
-}
-
-.skill:nth-of-type(2n){
-    top:calc(-0.5 * var(--familyCircleWidth) / 1.8);
-    left:calc(1.2 * var(--familyCircleWidth) / 1.8);
-}
-
-.skill:nth-of-type(3n){
-    top:calc(1.1 * var(--familyCircleWidth) / 1.8);
-    left:calc(-0.3 * var(--familyCircleWidth) / 1.8);
-}
-
-.skill:nth-of-type(4n){
-    top:calc(-0.5 * var(--familyCircleWidth) / 1.8);
-    left:calc(-0.6 * var(--familyCircleWidth) / 1.8);
-}
-
-.skill:nth-of-type(5n){
-    top:calc(1.5 * var(--familyCircleWidth) / 1.8);
-    left:calc(0.9 * var(--familyCircleWidth) / 1.8);
-
-}
-
-.skillFamily h3{
-    width:100%;
-    text-align: center;
-
-    /*color:var(--backgroundColorDark);
-    font-size: calc(0.8 * var(--h3Size));*/
-
-    font-family: "stickyNote";
-    font-size:calc(0.8 * var(--h3Size));
-    color:var(--detailColor2);
-    text-shadow: #f73b00;
-}
-
-.skill h4{
-    /*font-size:calc(1 * var(--fontSize));
-    color:var(--detailColor1);
-    font-family: "stickyNote";*/
-
-    font-family: "GT Haptik Bold";
-    font-size:calc(0.75 * var(--fontSize));
-    color:var(--normalFontColorDark);
-
-}
 
 .skillDataList{
     display:none;
 }
-
-/*
-    display: block;
-    background: black;
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    margin: 0;
-    background: radial-gradient(circle at 100px 100px, #5cabff, #000);
- */

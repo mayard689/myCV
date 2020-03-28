@@ -28,7 +28,7 @@
 
         <header>
 
-            <nav class="smallNavbar">
+            <nav class="navbar">
                 <?php include 'navbar.php' ?>
             </nav>
 
@@ -62,7 +62,7 @@
             <section id="education">
                 <h2><?=$persons[$activePersonName]["sectionsNames"]["education"]?></h2>
                 <div class="content">
-                    <?php include 'academic.php' ?>
+                    <?php include 'education.php' ?>
                 </div>
             </section>
 

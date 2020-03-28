@@ -92,7 +92,7 @@ $adrienJobs=[
     [
         "name" => "Chef de projet",
         "company" => "FARE",
-        "startDate" => "01-4-2009",
+        "startDate" => "01-04-2009",
         "endDate" => "31-12-2014",
         "results" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     ],
@@ -143,6 +143,32 @@ $adrienContactForm=[
         "placeholder" => "",
         "mandatory" => true
     ],
+];
+
+$adrienEducation=[
+    "DEA Astrophysique" => [
+        "school" => "Université de Nice Sophia Antipolis",
+        "date" => "Juillet 2004",
+        "details" => [
+            "Approfondissement des techniques optiques Haute Résolution Angulaire",
+            "Préparation à la recherche"
+        ]
+    ],
+    "IUP GEII Spécialisé en Optoélectronique" => [
+        "school" => "Université de Montpellier",
+        "date" => "Juillet 2003",
+        "details" => [
+            "Ingénieur maître en Optoélectronique et Informatique Industrielle",
+            "Major de promotion"
+        ]
+    ],
+    "DEUG Science de la matière" => [
+        "school" => "Université de Nîmes",
+        "date" => "Juillet 2000",
+        "details" => [
+        ]
+    ]
+
 ];
 
 /****************************************/
@@ -258,6 +284,7 @@ $barneyContactForm=[
 ];
 
 
+$barneyEducation=[];
 
 //PERSON MANAGEMENT
 
@@ -269,10 +296,11 @@ $persons =[
         "address"=> "34 rue du bourg",
         "phoneNumber" => "06.06.06.06.06",
         "email" => "adrien@truc.bidule",
-        "stylesheet" => "cssAdrien",
+        "stylesheet" => "cssAdrien0",
         "sectionsNames" => $adrienSectionName,
         "skills" => $adrienSkills,
         "jobs" => $adrienJobs,
+        "education" => $adrienEducation,
         "contact" => $adrienContactForm,
         "whoami" =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
@@ -289,6 +317,7 @@ $persons =[
         "sectionsNames" => $barneySectionName,
         "skills" => $barneySkills,
         "jobs" => $barneyJobs,
+        "education" => $barneyEducation,
         "contact" => $barneyContactForm,
         "whoami" =>"Hey guys. Je suis Barney, le barman qu'il vous faut. Vous verrez ici un aperçu de quelques une de mes compétences. C'est un 
         peu long donc n'hésitez pas à ouvrir une bière pendant votre lecture."

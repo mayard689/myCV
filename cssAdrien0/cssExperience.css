@@ -1,185 +1,72 @@
 
 #achievments .content {
-    display:flex;
-    flex-direction: column;
-
-    margin-top:00px;
-    margin-left:0px;
 }
 
 .calendar{
-
-    border: var(--debugBorder) blue;
-
-    --experienceVerticalShift:90px;/*100******************************************************************************************************************************************/
-    --calendarHeight:10px;
-    --connectionLineToTimeline: thick solid var(--h2FontColor);
-    --timeLine: thick solid var(--backgroundColorDark);
-    --jobDataPadding:10px;
-
-    /********************************************************************************************************************************************************************************/
-    --verticalTranslationForDataOverTimeline:translateY(calc(-5px - var(--calendarHeight) - 2 * var(--experienceVerticalShift)));
-    --verticalTranslationForDataBelowTimeline:translateY(calc(var(--calendarHeight) - 10px));
-    /********************************************************************************************************************************************************************************/
-    --horizontalTranslationForDataOnTheLeft :translateX(-50%);
-    --horizontalTranslationForDataOnTheRight :translateX(50%);
-
-    position:relative;
-    width:80%;
-
-    margin-top:calc(3 * var(--experienceVerticalShift));
-    margin-bottom:calc(3 * var(--experienceVerticalShift));
-    margin-left:10vw;
-
-}
-
-.calendar:before, .calendar:after{
-    position:absolute;
-    top:calc(-1 * var(--calendarHeight) /2 + 3px);
-    height: calc(2 * var(--calendarHeight));
-    width: calc(2 * var(--calendarHeight));
-    min-height:10px;
-    min-width:10px;
-    content:" ";
-    background:var(--backgroundColorDark);
-    border-radius: 50%;
-}
-
-.calendar:after{
-    right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .calendarElement{
-    position:absolute;
-    top:0;
-
-    border: var(--debugBorder) red;
+    display: flex;
+    justify-content: start;
     width:100%;
-    height:var(--calendarHeight);
-
-    border-bottom: var(--timeLine);
 }
 
-.calendarElement:nth-of-type(odd) .job{
-    /*border-bottom: var(--connectionLineToTimeline);/*note that left and right border are defined on the job rules*/
-    transform: translateY(200%);
-}
-
-.calendarElement:nth-of-type(even) .job{
-    /*border-top: var(--connectionLineToTimeline);/*note that left and right border are defined on the calendarElement rules*/
-    transform: translateY(-100%);
-}
 
 .job{
+    width:100%!important;
     display:flex;
-    flex-direction: column;
-    position:relative;
-    border:  var(--debugBorder) green;
-    height:var(--calendarHeight);
-    background-size: contain;
-
-    /*border-left: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
-    /*border-right: var(--connectionLineToTimeline);/*note that top or bottom border are defined on the job even or odd rules*/
-
-    border-radius: 5px;
-    border: var(--connectionLineToTimeline);
-    height:0;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin:20px;
 }
 
 
-.jobName, .jobResults, .jobCompany{
-    display:flex; flex-direction:column;
-
-    border:  var(--debugBorder) yellow;
-    overflow: visible;
-    white-space: nowrap;
-    width:100%;
-
-    width:max-content;
-    align-self: center;
-    transform:translateX(-50%);/*note : we change here the property's value for everybody, we will change it later for some of them*/
-
-    border-left:var(--connectionLineToTimeline);
-
-    padding-left:var(--jobDataPadding);
-    padding-right:var(--jobDataPadding);
-}
-
-/* jobs below the timeline */
-.calendarElement:nth-of-type(odd) .job .jobName, .calendarElement:nth-of-type(odd) .job .jobCompany, .calendarElement:nth-of-type(odd) .job .jobResults {
-    transform:translateX(50%) var(--verticalTranslationForDataBelowTimeline);
-}
-
-.calendarElement:nth-of-type(odd) .job .jobName::before {
-    content:" ";
-    height:var(--experienceVerticalShift) ;
-}
-
-/* jobs over the timeline */
-.calendarElement:nth-of-type(even) .job .jobName, .calendarElement:nth-of-type(even) .job .jobCompany, .calendarElement:nth-of-type(even) .job .jobResults {
-    transform:var(--horizontalTranslationForDataOnTheRight) var(--verticalTranslationForDataOverTimeline);
-}
-
-.calendarElement:nth-of-type(even) .job .jobResults:after {
-    content:" ";
-    height:calc(var(--experienceVerticalShift) - 45px) ;/*******************************************************************************************************************************************/
-}
-
-/* first (means 'first displayed') job child modulo 4 */
-/* displayed on the left of their parents center line / below the timeline */
-.calendarElement:nth-of-type(4n+1) .job .jobName, .calendarElement:nth-of-type(4n+1) .job .jobCompany, .calendarElement:nth-of-type(4n+1) .job .jobResults {
-    transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataBelowTimeline);
-
-    border-right: var(--connectionLineToTimeline);;
-    border-left:none;
-    text-align: right;
-}
-
-/* second job child modulo 2 */
-/* displayed on the left of their parents center line / over the timeline */
-.calendarElement:nth-of-type(4n+2) .job .jobName, .calendarElement:nth-of-type(4n+2) .job .jobCompany, .calendarElement:nth-of-type(4n+2) .job .jobResults {
-
-    transform:var(--horizontalTranslationForDataOnTheLeft) var(--verticalTranslationForDataOverTimeline);
-
-    border-right: var(--connectionLineToTimeline);
-    border-left:none;
-    text-align: right;
-}
 
 .jobName{
-    font-family: "stickyNote";
-    font-size:calc(0.8 * var(--h3Size));
-    color:var(--detailColor2);
-    text-shadow: #f73b00;
+    _display:inline;
+    order:2;
+    width:auto;
+    padding-right: 5px;
+    padding-left:5px;
 }
 
 .jobCompany{
-    font-family: "GT Haptik Bold";
-    font-size:calc(0.75 * var(--fontSize));
+    _display:inline;
+    order:1;
+    width:auto;
+    padding-right: 5px;
+
+    font-size: var(--h3Size);
+    color: var(--h3Color);
+    font-family : var(--fontH3);
+    margin:var(--h3margin);
 }
 
 .jobResults{
-    font-family: var(--fontP);
-    font-size:calc(0.75 * var(--fontSize));
-    width: 15vw;
-    white-space: pre-wrap;
+    _display:block;
+    order:5;
+    font-family : -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;;
+    flex-basis:95%;
+    flex-shrink:0 ;
+    flex-grow:0;
 }
 
 .jobStart{
-    font-family: var(--fontP);
-    font-size:calc(0.5 * var(--fontSize));
-    width: min-content;
-    white-space: pre-wrap;
-    background : var(--detailColor2);
-    position:absolute;
-    top:-60px;
-    padding:3px;
-    color:black;
-    border-left: thick solid black;
+    order:3;
+    justify-self: end;
+
+    font-size: var(--h3Size);
+    color: var(--h3Color);
+    font-family : var(--fontH3);
+    margin:var(--h3margin);
 }
 
-.calendarElement:nth-of-type(4n+2) .job .jobStart{
-    top:-30px;
+.jobEnd{
+    order:3;
+    justify-self: end;
+    color:fireBrick;
 }
-
-

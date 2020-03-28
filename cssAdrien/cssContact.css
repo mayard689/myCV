@@ -78,7 +78,7 @@
 .form-group input, .form-group textarea {
     background: transparent;
     border: none;
-    border-bottom: 2px solid var(--h2FontColor);
+    border-bottom: 2px solid var(--FontColor2);
     font-size: var(--h3Size);
     font-family: var(--fontP);
     color:var(--fontColorLight);
@@ -94,7 +94,7 @@
 }
 
 .form-btn .btn {
-    border: 2px solid var(--h2FontColor);
+    border: 2px solid var(--FontColor2);
     padding: .85rem 1.25rem;
     transition: all .3s ease;
     border-radius: 3px;
@@ -106,6 +106,6 @@
 }
 
 .form-btn .btn:hover {
-    border-color:var(--h2FontColor);
-    background-color: var(--h2FontColor);
+    border-color:var(--FontColor2);
+    background-color: var(--FontColor2);
 }
