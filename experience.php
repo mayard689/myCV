@@ -2,7 +2,7 @@
 <DIV class="calendar">
 
     <?php foreach ($persons[$activePersonName]["jobs"] as $job) { ?>
-        <article class="calendarElement">
+
 
             <?php
                 $max=strtotime($calendarMax);
@@ -21,7 +21,7 @@
             </DIV>
 
 
-        </article>
+
     <?php } ?>
 
 </DIV>
